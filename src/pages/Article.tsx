@@ -55,7 +55,7 @@ const Article = () => {
               <img 
                 src="/lovable-uploads/efeb78ca-317c-456d-b1f8-543002fb5fdb.png" 
                 alt="Gelenkschmerzen im Alter" 
-                className="w-full h-64 object-cover rounded-lg"
+                className="w-full h-96 md:h-[500px] object-cover rounded-lg"
               />
             </div>
             
