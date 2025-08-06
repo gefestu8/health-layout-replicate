@@ -51,6 +51,14 @@ const Article = () => {
       <section className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto">
           <div className="prose prose-lg max-w-none">
+            <div className="mb-8">
+              <img 
+                src="/lovable-uploads/efeb78ca-317c-456d-b1f8-543002fb5fdb.png" 
+                alt="Gelenkschmerzen im Alter" 
+                className="w-full h-64 object-cover rounded-lg"
+              />
+            </div>
+            
             <p className="text-lg leading-relaxed mb-6">
               <strong>Millionen Deutsche leiden unter Gelenkschmerzen.</strong> Besonders Menschen über 50 
               kennen das Problem: Morgens sind die Finger steif, die Knie schmerzen beim Treppensteigen, 
