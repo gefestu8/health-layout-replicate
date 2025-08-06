@@ -61,7 +61,11 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				'medical-red': 'hsl(var(--medical-red))',
+				'medical-blue': 'hsl(var(--medical-blue))',
+				'medical-gray': 'hsl(var(--medical-gray))',
+				'text-light': 'hsl(var(--text-light))'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
