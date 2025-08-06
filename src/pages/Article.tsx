@@ -1,9 +1,23 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Timer from "@/components/Timer";
+import { useState, useEffect } from "react";
 
 const Article = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: ""
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log("Form submitted:", formData);
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -127,19 +141,171 @@ const Article = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="bg-muted/30 py-12">
+      {/* CTA Order Section */}
+      <section className="bg-gradient-to-br from-red-50 to-orange-50 py-12 border-t-4 border-red-500">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-2xl font-bold text-foreground mb-4">
-              Haben Sie Fragen zu Gelenkbeschwerden?
-            </h2>
-            <p className="text-lg text-muted-foreground mb-8">
-              Vereinbaren Sie einen Termin mit einem Spezialisten in Ihrer Nähe
-            </p>
-            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
-              Expertenberatung vereinbaren
-            </Button>
+          <div className="max-w-md mx-auto">
+            <Card className="shadow-xl border-2 border-red-200">
+              <CardContent className="p-8">
+                <div className="text-center mb-6">
+                  <h2 className="text-2xl font-bold text-foreground mb-2">
+                    Limitiertes Angebot!
+                  </h2>
+                  <p className="text-red-600 font-semibold mb-4">
+                    Angebot läuft ab in:
+                  </p>
+                  <Timer />
+                </div>
+
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div>
+                    <Label htmlFor="name" className="text-sm font-medium">
+                      Ihr Name *
+                    </Label>
+                    <Input
+                      id="name"
+                      type="text"
+                      required
+                      value={formData.name}
+                      onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
+                      className="mt-1"
+                      placeholder="Vorname Nachname"
+                    />
+                  </div>
+                  
+                  <div>
+                    <Label htmlFor="phone" className="text-sm font-medium">
+                      Ihre Telefonnummer *
+                    </Label>
+                    <Input
+                      id="phone"
+                      type="tel"
+                      required
+                      value={formData.phone}
+                      onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
+                      className="mt-1"
+                      placeholder="+49..."
+                    />
+                  </div>
+
+                  <div className="text-center pt-4">
+                    <p className="text-sm text-foreground mb-3 font-medium">
+                      Flexosamin — bereits über 400.000 mal in Deutschland verkauft
+                    </p>
+                    
+                    <Button 
+                      type="submit" 
+                      size="lg" 
+                      className="w-full bg-red-600 hover:bg-red-700 text-white font-bold text-lg py-3 h-auto animate-pulse"
+                    >
+                      Jetzt bestellen
+                    </Button>
+                    
+                    <div className="mt-4 space-y-2">
+                      <div className="flex items-center justify-center gap-4 text-sm text-green-700">
+                        <span className="flex items-center gap-1">
+                          <span className="text-green-600">✅</span>
+                          TÜV geprüft
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <span className="text-green-600">✅</span>
+                          Von Ärzten empfohlen
+                        </span>
+                      </div>
+                      <div className="flex items-center justify-center text-sm text-green-700">
+                        <span className="flex items-center gap-1">
+                          <span className="text-green-600">✅</span>
+                          100% Natur
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Comments Section */}
+      <section className="py-8 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h3 className="text-xl font-bold text-foreground mb-6">Kommentare (23)</h3>
+            
+            <div className="space-y-6">
+              <div className="border-b border-border pb-6">
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-semibold">
+                    H
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="font-semibold text-foreground">Hans M., 67</span>
+                      <span className="text-muted-foreground text-sm">vor 2 Stunden</span>
+                    </div>
+                    <p className="text-foreground">
+                      Danke für diesen informativen Artikel! Als Rentner mit Knieproblemen kann ich nur bestätigen, 
+                      dass regelmäßige Bewegung wirklich hilft. Schwimmen hat mir sehr geholfen.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border-b border-border pb-6">
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center text-white font-semibold">
+                    M
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="font-semibold text-foreground">Monika S., 54</span>
+                      <span className="text-muted-foreground text-sm">vor 5 Stunden</span>
+                    </div>
+                    <p className="text-foreground">
+                      Sehr hilfreicher Artikel! Ich arbeite als Krankenschwester und die Belastung macht sich in den 
+                      Gelenken bemerkbar. Die Tipps zur Ernährung werde ich definitiv befolgen.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border-b border-border pb-6">
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white font-semibold">
+                    K
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="font-semibold text-foreground">Klaus W., 72</span>
+                      <span className="text-muted-foreground text-sm">vor 1 Tag</span>
+                    </div>
+                    <p className="text-foreground">
+                      Endlich mal ein Artikel, der nicht nur Medikamente empfiehlt! Als ehemaliger Handwerker 
+                      spüre ich jeden Tag meine Gelenke. Werde den Tipp mit der Gewichtsreduktion ernst nehmen.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border-b border-border pb-6">
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-white font-semibold">
+                    S
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="font-semibold text-foreground">Sabine K., 49</span>
+                      <span className="text-muted-foreground text-sm">vor 2 Tagen</span>
+                    </div>
+                    <p className="text-foreground">
+                      Meine Mutter leidet seit Jahren unter Arthrose. Dieser Artikel gibt mir Hoffnung, 
+                      dass es natürliche Wege gibt, ihr zu helfen. Vielen Dank für die wertvollen Informationen!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
