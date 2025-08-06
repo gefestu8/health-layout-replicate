@@ -1,57 +1,96 @@
 const Footer = () => {
-  const footerSections = [
-    {
-      title: "Здоровье",
-      links: ["Симптомы", "Диагностика", "Лечение", "Профилактика"]
-    },
-    {
-      title: "Сервисы", 
-      links: ["Поиск врача", "Онлайн консультации", "Анализы", "Вакцинация"]
-    },
-    {
-      title: "Информация",
-      links: ["О нас", "Контакты", "Политика конфиденциальности", "Условия использования"]
-    },
-    {
-      title: "Поддержка",
-      links: ["Помощь", "FAQ", "Обратная связь", "Техподдержка"]
-    }
-  ];
-
   return (
-    <footer className="bg-muted mt-20">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {footerSections.map((section, index) => (
-            <div key={index}>
-              <h3 className="font-semibold text-foreground mb-4">{section.title}</h3>
-              <ul className="space-y-2">
-                {section.links.map((link, linkIndex) => (
-                  <li key={linkIndex}>
-                    <a href="#" className="text-muted-foreground hover:text-primary text-sm">
-                      {link}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+    <footer className="bg-background border-t border-border py-8">
+      <div className="container mx-auto px-4">
+        {/* Top Section with Three Columns */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          <div className="flex items-start space-x-4">
+            <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+              <span className="text-white font-bold text-xs">afgis</span>
             </div>
-          ))}
-        </div>
-        
-        <div className="border-t border-border mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center mb-4 md:mb-0">
-              <div className="bg-primary text-primary-foreground px-3 py-2 font-bold text-lg rounded-sm">
-                MediSchau
-              </div>
-            </div>
-            
-            <div className="flex items-center gap-4">
-              <span className="text-muted-foreground text-sm">
-                © 2024 MediSchau. Все права защищены.
-              </span>
+            <div>
+              <h3 className="font-semibold text-foreground text-sm mb-1">
+                Unser Angebot erfüllt die afgis-Transparenzkriterien.
+              </h3>
+              <p className="text-xs text-muted-foreground">
+                Das afgis-Logo steht für hochwertige Gesundheitsinformationen im Internet.
+              </p>
             </div>
           </div>
+
+          <div className="flex items-start space-x-4">
+            <div className="w-12 h-12 bg-red-600 rounded flex items-center justify-center flex-shrink-0">
+              <span className="text-white font-bold text-xs">W&B</span>
+            </div>
+            <div>
+              <h3 className="font-semibold text-foreground text-sm mb-1">
+                European Publishing Awards 2025
+              </h3>
+              <p className="text-xs text-muted-foreground">
+                Wort & Bild Verlag gewinnt internationale Preise in den Kategorien Story of the Year und Podcast.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex items-start space-x-4">
+            <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+              <span className="text-white font-bold text-xs">SG</span>
+            </div>
+            <div>
+              <h3 className="font-semibold text-foreground text-sm mb-1">
+                Zertifikat der Stiftung Gesundheit
+              </h3>
+              <p className="text-xs text-muted-foreground">
+                In qualifizierter Weise wird über gesundheitsrelevante Themen und Zusammenhänge informiert.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Links Section */}
+        <div className="border-t border-border pt-6 mb-4">
+          <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs text-muted-foreground">
+            <a href="#" className="hover:text-foreground">Beratende Experten</a>
+            <span>|</span>
+            <a href="#" className="hover:text-foreground">Ethische Grundlagen</a>
+            <span>|</span>
+            <a href="#" className="hover:text-foreground">Wissenschaftlicher Beirat</a>
+            <span>|</span>
+            <a href="#" className="hover:text-foreground">Privacy Manager</a>
+            <span>|</span>
+            <a href="#" className="hover:text-foreground">Zustimmung widerrufen</a>
+            <span>|</span>
+            <a href="#" className="hover:text-foreground">Datenschutz</a>
+            <span>|</span>
+            <a href="#" className="hover:text-foreground">Über uns</a>
+            <span>|</span>
+            <a href="#" className="hover:text-foreground">Kontaktformular</a>
+          </div>
+          
+          <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs text-muted-foreground mt-2">
+            <a href="#" className="hover:text-foreground">Abo kündigen</a>
+            <span>|</span>
+            <a href="#" className="hover:text-foreground">Impressum</a>
+            <span>|</span>
+            <a href="#" className="hover:text-foreground">Nutzungsbedingungen</a>
+            <span>|</span>
+            <a href="#" className="hover:text-foreground">Barrierefreiheit</a>
+            <span>|</span>
+            <a href="#" className="hover:text-foreground">Archiv</a>
+            <span>|</span>
+            <a href="#" className="hover:text-foreground">Arzneimittellisten</a>
+            <span>|</span>
+            <a href="#" className="hover:text-foreground">Presse-Service</a>
+            <span>|</span>
+            <a href="#" className="hover:text-foreground">Media-Service</a>
+            <span>|</span>
+            <a href="#" className="hover:text-foreground">Mediadaten</a>
+          </div>
+        </div>
+
+        {/* Copyright */}
+        <div className="text-xs text-muted-foreground">
+          © Wort & Bild Verlag Konradshöhe GmbH & Co. KG - Gesundheits-Tipps und Infos zu Medizin, Krankheiten, Therapien, Laborwerten und Medikamenten
         </div>
       </div>
     </footer>
