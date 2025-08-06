@@ -59,9 +59,6 @@ const Header = () => {
                 placeholder="Suchbegriff oder Frage an KI eingeben"
                 className="w-80 px-4 py-3 border border-border rounded-lg bg-background text-sm focus:outline-none focus:ring-2 focus:ring-primary/20"
               />
-              <div className="absolute right-2 top-1/2 transform -translate-y-1/2 text-xs text-muted-foreground">
-                powered by you.com
-              </div>
             </div>
           </div>
         </div>
