@@ -48,8 +48,8 @@ const Footer = () => {
         </div>
 
         {/* Links Section */}
-        <div className="border-t border-border pt-6 mb-4">
-          <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs text-muted-foreground">
+        <div className="border-t border-border pt-6 mb-4 text-center">
+          <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-xs text-muted-foreground">
             <a href="#" className="hover:text-foreground">Beratende Experten</a>
             <span>|</span>
             <a href="#" className="hover:text-foreground">Ethische Grundlagen</a>
@@ -67,7 +67,7 @@ const Footer = () => {
             <a href="#" className="hover:text-foreground">Kontaktformular</a>
           </div>
           
-          <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs text-muted-foreground mt-2">
+          <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-xs text-muted-foreground mt-2">
             <a href="#" className="hover:text-foreground">Abo kündigen</a>
             <span>|</span>
             <a href="#" className="hover:text-foreground">Impressum</a>
@@ -89,7 +89,7 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="text-xs text-muted-foreground">
+        <div className="text-xs text-muted-foreground text-center">
           © Wort & Bild Verlag Konradshöhe GmbH & Co. KG - Gesundheits-Tipps und Infos zu Medizin, Krankheiten, Therapien, Laborwerten und Medikamenten
         </div>
       </div>
