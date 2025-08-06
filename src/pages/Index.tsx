@@ -95,41 +95,74 @@ const Index = () => {
 
       {/* Article Content Section */}
       <section className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-          {/* Main Content */}
-          <div className="lg:col-span-8">
-            <div className="prose prose-lg max-w-none">
-              <p className="text-lg leading-relaxed mb-6">
-                Cem Özdemir wollte, so hieß es, in unsere Kühlschränke hineinregieren: 
-                Rezepturvorgaben, Ernährungslenkung, Werbeverbot für viele Lebensmittel. Nicht 
-                mal vor Traditionsgerichten hätte der grüne Ex-Ernährungsminister haltgemacht – 
-                wie Ahle Wurscht, Labskaus oder Lebkuchen.
-              </p>
-              
-              <p className="text-lg leading-relaxed mb-6">
-                Wer das für übertrieben hält, liegt richtig. Denn das Narrativ der „grünen 
-                Verbotsfantasie" war die Argumentation der Lebensmittelhersteller: Die 
-                Bundesvereinigung der Deutschen Ernährungsindustrie wetterte 2023 mit 
-                ähnlichen Worten gegen das Kinder-Lebensmittel-Werbegesetz (KLWG).
-              </p>
+        <div className="max-w-4xl mx-auto">
+          <div className="prose prose-lg max-w-none">
+            <p className="text-lg leading-relaxed mb-6">
+              Cem Özdemir wollte, so hieß es, in unsere Kühlschränke hineinregieren: 
+              Rezepturvorgaben, Ernährungslenkung, Werbeverbot für viele Lebensmittel. Nicht 
+              mal vor Traditionsgerichten hätte der grüne Ex-Ernährungsminister haltgemacht – 
+              wie Ahle Wurscht, Labskaus oder Lebkuchen.
+            </p>
+            
+            <p className="text-lg leading-relaxed mb-6">
+              Wer das für übertrieben hält, liegt richtig. Denn das Narrativ der „grünen 
+              Verbotsfantasie" war die Argumentation der Lebensmittelhersteller: Die 
+              Bundesvereinigung der Deutschen Ernährungsindustrie wetterte 2023 mit 
+              ähnlichen Worten gegen das Kinder-Lebensmittel-Werbegesetz (KLWG).
+            </p>
 
-              <h2 className="text-2xl font-bold text-foreground mb-4 mt-8">
-                Kritik an Werbeverbot für Süßigkeiten
-              </h2>
-              
-              <p className="text-lg leading-relaxed mb-6">
-                Tatsächlich wollte Özdemir lediglich Werbung für ungesunde Lebensmittel an 
-                Kinder unter 14 Jahren einschränken – keine Rezeptvorgaben, keine radikalen 
-                Verbote. Für Erwachsene hätte sich wohl nichts geändert. Außer vielleicht, dass 
-                sie tagsüber im Fernsehen keine tanzenden Tiger oder sprechende Schokolade 
-                mehr gesehen hätten.
-              </p>
-            </div>
+            <h2 className="text-2xl font-bold text-foreground mb-4 mt-8">
+              Kritik an Werbeverbot für Süßigkeiten
+            </h2>
+            
+            <p className="text-lg leading-relaxed mb-6">
+              Tatsächlich wollte Özdemir lediglich Werbung für ungesunde Lebensmittel an 
+              Kinder unter 14 Jahren einschränken – keine Rezeptvorgaben, keine radikalen 
+              Verbote. Für Erwachsene hätte sich wohl nichts geändert. Außer vielleicht, dass 
+              sie tagsüber im Fernsehen keine tanzenden Tiger oder sprechende Schokolade 
+              mehr gesehen hätten.
+            </p>
           </div>
+        </div>
+      </section>
 
-          {/* Sidebar */}
-          <div className="lg:col-span-4">
-            <div className="bg-muted/30 p-6 rounded-lg mb-6">
+      {/* Sources Section */}
+      <section className="container mx-auto px-4 py-8 border-t border-border">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-sm leading-relaxed space-y-4">
+            <p>
+              Deutscher Bundestag: Lobbyregister: Häufig gestellte Fragen (FAQ). 
+              <a href="https://www.lobbyregister.bundestag.de/" className="text-primary hover:underline">
+                https://www.lobbyregister.bundestag.de/
+              </a> (Abgerufen am 20.06.2025)
+            </p>
+            <p>
+              CDU/SPD: Verantwortung für Deutschland, Koalitionsvertrag zwischen CDU, 
+              CSU und SPD. <a href="https://www.spd.de/" className="text-primary hover:underline">
+                https://www.spd.de/
+              </a> (Abgerufen am 20.06.2025)
+            </p>
+            <p>
+              Verbraucherzentrale Niedersachsen: Der Nutri-Score: Berechnung, Vor- und 
+              Nachteile. <a href="https://www.verbraucherzentrale-niedersachsen.de/" className="text-primary hover:underline">
+                https://www.verbraucherzentrale-niedersachsen.de/
+              </a> (Abgerufen am 02.07.2025)
+            </p>
+            <p>
+              Verbraucherzentrale Hamburg: Nutri-Score wird ab 2024 besser. 
+              <a href="https://www.vzhh.de/" className="text-primary hover:underline">
+                https://www.vzhh.de/
+              </a> (Abgerufen am 02.07.2025)
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Sidebar Content as Full Width Section */}
+      <section className="bg-muted/30 py-8">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-background p-6 rounded-lg shadow-sm">
               <h3 className="font-bold text-foreground mb-3">
                 Welche Frage zu Ernährung haben Sie?
               </h3>
@@ -138,7 +171,7 @@ const Index = () => {
               </Button>
             </div>
 
-            <div className="bg-muted/30 p-6 rounded-lg">
+            <div className="bg-background p-6 rounded-lg shadow-sm">
               <h3 className="font-bold text-foreground mb-4">PASSENDE THEMEN</h3>
               <div className="space-y-3">
                 <a href="#" className="block text-primary hover:underline">
