@@ -72,7 +72,13 @@ const Header = () => {
             <ul className="flex items-center text-sm font-medium">
               {navItems.map((item, index) => (
                 <li key={index} className="py-4 px-4 text-muted-foreground hover:text-primary cursor-pointer uppercase tracking-wide">
-                  {item}
+                  {item === "HOME" ? (
+                    <a href="/">{item}</a>
+                  ) : item === "KRANKHEITEN & SYMPTOME" ? (
+                    <a href="/article">{item}</a>
+                  ) : (
+                    <span>{item}</span>
+                  )}
                 </li>
               ))}
             </ul>
