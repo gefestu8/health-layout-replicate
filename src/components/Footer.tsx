@@ -1,3 +1,7 @@
+import afgisLogo from "@/assets/afgis-seal.png";
+import wbLogo from "@/assets/wb-verlag-logo.png";
+import sgLogo from "@/assets/stiftung-gesundheit-logo.png";
+
 const Footer = () => {
   return (
     <footer className="bg-background border-t border-border py-8">
@@ -5,8 +9,8 @@ const Footer = () => {
         {/* Top Section with Three Columns */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div className="flex items-start space-x-4">
-            <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
-              <span className="text-white font-bold text-xs">afgis</span>
+            <div className="w-12 h-12 flex items-center justify-center flex-shrink-0">
+              <img src={afgisLogo} alt="afgis Logo" className="w-full h-full object-contain" />
             </div>
             <div>
               <h3 className="font-semibold text-foreground text-sm mb-1">
@@ -19,8 +23,8 @@ const Footer = () => {
           </div>
 
           <div className="flex items-start space-x-4">
-            <div className="w-12 h-12 bg-red-600 rounded flex items-center justify-center flex-shrink-0">
-              <span className="text-white font-bold text-xs">W&B</span>
+            <div className="w-12 h-12 flex items-center justify-center flex-shrink-0">
+              <img src={wbLogo} alt="W&B Logo" className="w-full h-full object-contain" />
             </div>
             <div>
               <h3 className="font-semibold text-foreground text-sm mb-1">
@@ -33,8 +37,8 @@ const Footer = () => {
           </div>
 
           <div className="flex items-start space-x-4">
-            <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
-              <span className="text-white font-bold text-xs">SG</span>
+            <div className="w-12 h-12 flex items-center justify-center flex-shrink-0">
+              <img src={sgLogo} alt="Stiftung Gesundheit Logo" className="w-full h-full object-contain" />
             </div>
             <div>
               <h3 className="font-semibold text-foreground text-sm mb-1">
