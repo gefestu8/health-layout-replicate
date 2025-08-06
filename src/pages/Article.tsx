@@ -5,6 +5,10 @@ import { Label } from "@/components/ui/label";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Timer from "@/components/Timer";
+import hansImage from "@/assets/commenter-hans.jpg";
+import monikaImage from "@/assets/commenter-monika.jpg";
+import klausImage from "@/assets/commenter-klaus.jpg";
+import sabineImage from "@/assets/commenter-sabine.jpg";
 import { useState, useEffect } from "react";
 
 const Article = () => {
@@ -236,9 +240,11 @@ const Article = () => {
             <div className="space-y-6">
               <div className="border-b border-border pb-6">
                 <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-semibold">
-                    H
-                  </div>
+                  <img 
+                    src={hansImage} 
+                    alt="Hans M." 
+                    className="w-10 h-10 rounded-full object-cover"
+                  />
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
                       <span className="font-semibold text-foreground">Hans M., 67</span>
@@ -254,9 +260,11 @@ const Article = () => {
 
               <div className="border-b border-border pb-6">
                 <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center text-white font-semibold">
-                    M
-                  </div>
+                  <img 
+                    src={monikaImage} 
+                    alt="Monika S." 
+                    className="w-10 h-10 rounded-full object-cover"
+                  />
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
                       <span className="font-semibold text-foreground">Monika S., 54</span>
@@ -272,9 +280,11 @@ const Article = () => {
 
               <div className="border-b border-border pb-6">
                 <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white font-semibold">
-                    K
-                  </div>
+                  <img 
+                    src={klausImage} 
+                    alt="Klaus W." 
+                    className="w-10 h-10 rounded-full object-cover"
+                  />
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
                       <span className="font-semibold text-foreground">Klaus W., 72</span>
@@ -290,9 +300,11 @@ const Article = () => {
 
               <div className="border-b border-border pb-6">
                 <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-white font-semibold">
-                    S
-                  </div>
+                  <img 
+                    src={sabineImage} 
+                    alt="Sabine K." 
+                    className="w-10 h-10 rounded-full object-cover"
+                  />
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
                       <span className="font-semibold text-foreground">Sabine K., 49</span>
