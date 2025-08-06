@@ -84,19 +84,72 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-foreground mb-4">
-            Наши преимущества
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Предоставляем достоверную медицинскую информацию и качественные услуги здравоохранения
-          </p>
+      {/* Author Info Section */}
+      <section className="container mx-auto px-4 py-4 border-b border-border">
+        <div className="text-sm text-muted-foreground">
+          Von <span className="text-primary font-medium">Ali Vahid Roodsari</span> (Medizinredakteur) • 
+          Wissenschaftliche Prüfung: <span className="text-primary font-medium">Dr. Dennis Ballwieser</span> (Arzt) • 
+          31.07.2025
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {features.map((feature, index) => <FeatureCard key={index} title={feature.title} description={feature.description} icon={feature.icon} variant={feature.variant} />)}
+      </section>
+
+      {/* Article Content Section */}
+      <section className="container mx-auto px-4 py-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          {/* Main Content */}
+          <div className="lg:col-span-8">
+            <div className="prose prose-lg max-w-none">
+              <p className="text-lg leading-relaxed mb-6">
+                Cem Özdemir wollte, so hieß es, in unsere Kühlschränke hineinregieren: 
+                Rezepturvorgaben, Ernährungslenkung, Werbeverbot für viele Lebensmittel. Nicht 
+                mal vor Traditionsgerichten hätte der grüne Ex-Ernährungsminister haltgemacht – 
+                wie Ahle Wurscht, Labskaus oder Lebkuchen.
+              </p>
+              
+              <p className="text-lg leading-relaxed mb-6">
+                Wer das für übertrieben hält, liegt richtig. Denn das Narrativ der „grünen 
+                Verbotsfantasie" war die Argumentation der Lebensmittelhersteller: Die 
+                Bundesvereinigung der Deutschen Ernährungsindustrie wetterte 2023 mit 
+                ähnlichen Worten gegen das Kinder-Lebensmittel-Werbegesetz (KLWG).
+              </p>
+
+              <h2 className="text-2xl font-bold text-foreground mb-4 mt-8">
+                Kritik an Werbeverbot für Süßigkeiten
+              </h2>
+              
+              <p className="text-lg leading-relaxed mb-6">
+                Tatsächlich wollte Özdemir lediglich Werbung für ungesunde Lebensmittel an 
+                Kinder unter 14 Jahren einschränken – keine Rezeptvorgaben, keine radikalen 
+                Verbote. Für Erwachsene hätte sich wohl nichts geändert. Außer vielleicht, dass 
+                sie tagsüber im Fernsehen keine tanzenden Tiger oder sprechende Schokolade 
+                mehr gesehen hätten.
+              </p>
+            </div>
+          </div>
+
+          {/* Sidebar */}
+          <div className="lg:col-span-4">
+            <div className="bg-muted/30 p-6 rounded-lg mb-6">
+              <h3 className="font-bold text-foreground mb-3">
+                Welche Frage zu Ernährung haben Sie?
+              </h3>
+              <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
+                Frage an KI stellen
+              </Button>
+            </div>
+
+            <div className="bg-muted/30 p-6 rounded-lg">
+              <h3 className="font-bold text-foreground mb-4">PASSENDE THEMEN</h3>
+              <div className="space-y-3">
+                <a href="#" className="block text-primary hover:underline">
+                  Ernährung
+                </a>
+                <a href="#" className="block text-primary hover:underline">
+                  Kinderernährung
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
