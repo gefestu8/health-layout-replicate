@@ -70,10 +70,16 @@ const Index = () => {
           </div>
           
           <div className="lg:col-span-4">
-            
-            <p className="text-xs text-muted-foreground mt-2 text-center">
-              Лоббисты медицинской индустрии влияют на политические решения
-            </p>
+            <div className="relative">
+              <img 
+                src={heroImage} 
+                alt="Медицинская индустрия и лоббизм" 
+                className="w-full h-auto rounded-lg shadow-lg"
+              />
+              <p className="text-xs text-muted-foreground mt-2 text-center">
+                Лоббисты медицинской индустрии влияют на политические решения
+              </p>
+            </div>
           </div>
         </div>
       </section>
