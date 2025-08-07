@@ -15,114 +15,320 @@ const ReactDOMServer = require('react-dom/server');
 function generateArticleHTML() {
   return `
     <div class="min-h-screen bg-background">
-      <header class="bg-white shadow-sm border-b">
-        <div class="max-w-4xl mx-auto px-4 py-4">
-          <h1 class="text-2xl font-bold text-primary">Gesundheitsmagazin</h1>
+      <header class="bg-background border-b border-border">
+        <div class="container mx-auto px-4 py-4">
+          <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-primary">Gesundheitsmagazin</h1>
+            <nav class="hidden md:block">
+              <ul class="flex space-x-6 text-sm">
+                <li><a href="#" class="text-muted-foreground hover:text-foreground">Home</a></li>
+                <li><a href="#" class="text-muted-foreground hover:text-foreground">Gesundheit</a></li>
+                <li><a href="#" class="text-muted-foreground hover:text-foreground">Medizin</a></li>
+              </ul>
+            </nav>
+          </div>
         </div>
       </header>
       
-      <main class="max-w-4xl mx-auto px-4 py-8">
-        <article>
-          <header class="mb-8">
-            <h1 class="text-4xl font-bold mb-4 text-primary">Boris Becker über Flexosamine: "Jetzt bewege ich mich wieder wie früher"</h1>
-            <p class="text-xl text-muted-foreground mb-6">Ex-Tennisstar Boris Becker spricht offen über seine Gelenkprobleme und wie ein innovatives Gelenk-Gel aus Deutschland sein Leben verändert hat.</p>
-            <div class="flex items-center gap-4 text-sm text-muted-foreground">
-              <span>Von: Gesundheitsmagazin</span>
-              <span>•</span>
-              <span>${new Date().toLocaleDateString('de-DE')}</span>
-            </div>
-          </header>
+      <!-- Article Header -->
+      <section class="container mx-auto px-4 py-8 border-b border-border">
+        <div class="max-w-4xl mx-auto">
+          <div class="mb-6">
+            <span class="bg-primary text-primary-foreground px-3 py-1 rounded text-sm font-medium">
+              GESUNDHEIT
+            </span>
+          </div>
+          
+          <h1 class="text-3xl md:text-4xl font-bold text-foreground mb-6 leading-tight">„Ich war gelähmt vor Schmerz. Jetzt bewege ich mich wieder wie früher."</h1>
+          <p class="text-xl text-muted-foreground">Erfahrungsbericht von Boris Becker – Ex-Tennisstar spricht offen über seine Gelenkhölle</p>
+        </div>
+      </section>
 
-          <div class="prose max-w-none">
-            <img src="./lovable-uploads/efeb78ca-317c-456d-b1f8-543002fb5fdb.png" alt="Boris Becker über Flexosamine" class="w-full rounded-lg mb-8">
+      <!-- Article Content -->
+      <section class="container mx-auto px-4 py-8">
+        <div class="max-w-4xl mx-auto">
+          <div class="prose prose-lg max-w-none">
+            <div class="mb-8">
+              <img src="./lovable-uploads/efeb78ca-317c-456d-b1f8-543002fb5fdb.png" alt="Boris Becker" class="w-full h-auto object-cover rounded-lg" />
+            </div>
             
-            <p class="lead text-lg mb-6">Nach jahrelangen Gelenkschmerzen hat Boris Becker endlich eine Lösung gefunden. In einem exklusiven Interview spricht der ehemalige Tennisstar über seine Erfahrungen mit Flexosamine - einem revolutionären Gelenk-Gel, das in Deutschland entwickelt wurde.</p>
+            <h2 class="text-2xl font-bold text-foreground mb-4 mt-8">Persönlicher Einstieg</h2>
+            <p class="text-lg leading-relaxed mb-6">
+              <strong>„Ich hatte alles. Doch ich verlor das Wichtigste: meine Beweglichkeit."</strong>
+              <br/>
+              Ich bin Boris Becker. Ich habe große Turniere gewonnen, für mein Land gespielt, unzählige Stunden auf dem Platz verbracht.
+              <br/><br/>
+              Doch der härteste Kampf meines Lebens begann nach meiner Karriere – und nicht mit einem Schläger in der Hand.
+              <br/><br/>
+              Es begann schleichend. Schmerzen im Knie, ein steifer Rücken, brennende Finger.
+              <br/>
+              <em>„Ich konnte mir kaum noch selbst die Socken anziehen."</em>
+              <br/><br/>
+              Sport? Unmöglich.
+              <br/>
+              Spazieren? Nur unter Schmerzen.
+              <br/>
+              Schlafen? Unruhig, unterbrochen, verzweifelt.
+            </p>
+            
+            <h2 class="text-2xl font-bold text-foreground mb-4 mt-8">Der medizinische Teufelskreis</h2>
+            <p class="text-lg leading-relaxed mb-6">
+              <strong>„Nichts hat langfristig geholfen."</strong>
+              <br/>
+              Ich habe alles versucht:
+            </p>
+            <ul class="list-disc list-inside mb-6 space-y-2">
+              <li>Tabletten</li>
+              <li>Kortison</li>
+              <li>Spritzen</li>
+              <li>Physiotherapie</li>
+            </ul>
+            <p class="text-lg leading-relaxed mb-6">
+              Manches half kurz. Doch die Schmerzen kamen immer wieder – härter und tiefer als zuvor.
+              <br/><br/>
+              Ich begann zu akzeptieren: „Das ist eben das Alter."
+              <br/><br/>
+              Aber innerlich wehrte ich mich.
+              <br/>
+              <em>„Ich wollte mein Leben zurück. Nicht morgen. Jetzt."</em>
+            </p>
 
-            <h2 class="text-2xl font-bold mt-8 mb-4">Die Schmerzen eines Champions</h2>
-            <p class="mb-4">"Jahrelang habe ich unter starken Gelenkschmerzen gelitten", berichtet Boris Becker. "Als ehemaliger Profisportler waren meine Knie und mein Rücken stark belastet. Die Schmerzen wurden so stark, dass ich nachts nicht mehr schlafen konnte."</p>
-
-            <p class="mb-6">Wie viele Menschen in seinem Alter suchte Becker nach einer Lösung, die nicht nur die Symptome lindert, sondern auch langfristig hilft. "Ich habe alles versucht - von Physiotherapie bis hin zu starken Schmerzmitteln. Nichts hat wirklich geholfen."</p>
-
-            <h2 class="text-2xl font-bold mt-8 mb-4">Die Entdeckung von Flexosamine</h2>
-            <p class="mb-4">Durch einen Bekannten erfuhr Becker von Flexosamine, einem innovativen Gelenk-Gel aus Deutschland. "Anfangs war ich skeptisch", gibt er zu. "Aber nach den ersten Anwendungen spürte ich bereits eine deutliche Verbesserung."</p>
-
-            <div class="bg-blue-50 p-6 rounded-lg my-8">
-              <h3 class="text-xl font-bold mb-4">Was macht Flexosamine so besonders?</h3>
-              <ul class="space-y-2">
-                <li>✓ Natürliche Inhaltsstoffe aus Deutschland</li>
-                <li>✓ Schnelle Wirkung durch innovative Gel-Formel</li>
-                <li>✓ Lindert Schmerzen und Entzündungen</li>
-                <li>✓ Verbessert die Beweglichkeit</li>
-                <li>✓ Ohne Nebenwirkungen</li>
-              </ul>
+            <div class="mb-8">
+              <img src="./lovable-uploads/DeWatermark.ai_1754506600916.jpeg" alt="Boris Becker mit Krücken" class="w-full h-auto object-cover rounded-lg" />
             </div>
 
-            <h2 class="text-2xl font-bold mt-8 mb-4">Die Transformation</h2>
-            <p class="mb-4">"Nach nur wenigen Wochen konnte ich wieder ohne Schmerzen gehen", erzählt Becker begeistert. "Heute fühle ich mich wie früher - beweglich und schmerzfrei. Flexosamine hat mein Leben verändert."</p>
+            <h2 class="text-2xl font-bold text-foreground mb-4 mt-8">Die Empfehlung – Flexosamine</h2>
+            <p class="text-lg leading-relaxed mb-6">
+              <strong>„Ein Tipp eines Arztes hat alles verändert."</strong>
+              <br/>
+              Ein befreundeter Arzt, selbst ehemaliger Leistungssportler, sagte mir klipp und klar:
+              <br/>
+              <em>„Du brauchst keine OP. Du brauchst Regeneration – von innen."</em>
+              <br/><br/>
+              Seine Empfehlung: <strong>Flexosamine</strong> – ein Gelenk-Gel mit neuartiger Wirkformel.
+            </p>
+            <ul class="list-disc list-inside mb-6 space-y-2">
+              <li>Dringt tief in das Gewebe ein</li>
+              <li>Unterstützt Knorpelregeneration</li>
+              <li>Lindert Entzündungen & Schwellungen</li>
+              <li>Verbessert Beweglichkeit</li>
+            </ul>
+            <p class="text-lg leading-relaxed mb-6">
+              Natürlich. Ohne Tabletten. Ohne Nebenwirkungen.
+            </p>
 
-            <img src="./lovable-uploads/DeWatermark.ai_1754506600916.jpeg" alt="Flexosamine Gel" class="w-full max-w-md mx-auto rounded-lg my-8">
+            <h2 class="text-2xl font-bold text-foreground mb-4 mt-8">Die Anwendung – und der Effekt</h2>
+            <p class="text-lg leading-relaxed mb-6">
+              <strong>„Ich spürte die Wirkung früher, als ich dachte."</strong>
+              <br/>
+              Ich begann, morgens und abends Flexosamine auf Knie, Rücken und Hände aufzutragen.
+              <br/><br/>
+              Ohne Erwartungen – aber mit Hoffnung.
+              <br/><br/>
+              Und dann passierte es:
+            </p>
+            <ul class="list-disc list-inside mb-6 space-y-2">
+              <li>✅ Nach 3 Tagen – weniger Steifheit</li>
+              <li>✅ Nach 6 Tagen – ruhiger Schlaf, ohne ständiges Aufwachen</li>
+              <li>✅ Nach 2 Wochen – wieder Spaziergänge möglich</li>
+              <li>✅ Nach 3 Wochen – ich stand wieder auf dem Tennisplatz</li>
+            </ul>
+            <p class="text-lg leading-relaxed mb-6">
+              <em>„Nicht für ein Turnier. Sondern für mich. Für mein Leben."</em>
+            </p>
 
-            <div class="bg-green-50 p-8 rounded-lg text-center my-12">
-              <h2 class="text-3xl font-bold mb-4 text-green-800">🔥 Limitiertes Angebot 🔥</h2>
-              <p class="text-xl mb-6">Nur heute: 50% Rabatt auf Flexosamine!</p>
-              <div class="mb-6">
-                <span class="text-3xl font-bold line-through text-gray-500">79,98€</span>
-                <span class="text-4xl font-bold text-green-600 ml-4">39,99€</span>
-              </div>
-              <div class="countdown-timer mb-6">
-                <span class="text-lg">Angebot endet in: </span>
-                <span class="font-mono text-xl font-bold text-red-600">23:45:12</span>
-              </div>
-              <a href="#order" class="inline-block bg-green-600 text-white px-8 py-4 rounded-lg text-xl font-bold hover:bg-green-700 transition-colors">
-                Jetzt 50% sparen →
-              </a>
-            </div>
+            <h2 class="text-2xl font-bold text-foreground mb-4 mt-8">Für wen ist Flexosamine geeignet?</h2>
+            <ul class="list-disc list-inside mb-6 space-y-2">
+              <li>Menschen mit Gelenkverschleiß</li>
+              <li>Senioren mit eingeschränkter Beweglichkeit</li>
+              <li>Ehemalige Sportler mit alten Verletzungen</li>
+              <li>Menschen mit Schmerzen durch Arbeit oder Haltung</li>
+            </ul>
+            <p class="text-lg leading-relaxed mb-6">
+              <em>„Ich empfehle es jedem, der noch Hoffnung hat – und nicht aufgeben will."</em>
+            </p>
+            
+            <h2 class="text-2xl font-bold text-foreground mb-4 mt-8">Was ist Flexosamine?</h2>
+            <p class="text-lg leading-relaxed mb-6">
+              Flexosamine ist ein therapeutisches Gel, entwickelt in Deutschland, mit einer hochkonzentrierten Formel auf natürlicher Basis.
+            </p>
+            <ul class="list-none mb-6 space-y-2">
+                <li>💡 Anwendung: 2× täglich lokal auftragen</li>
+                <li>🌿 100 % Naturformel</li>
+                <li>🔬 Von Ärzten empfohlen</li>
+                <li>✅ TÜV-geprüft</li>
+                <li>🚫 Keine bekannten Nebenwirkungen</li>
+            </ul>
 
-            <h2 class="text-2xl font-bold mt-8 mb-4">Kundenbewertungen</h2>
-            <div class="grid gap-6 md:grid-cols-2 my-8">
-              <div class="bg-gray-50 p-6 rounded-lg">
-                <div class="flex items-center mb-4">
-                  <img src="./img/commenter-hans.jpg" alt="Hans" class="w-12 h-12 rounded-full mr-4">
-                  <div>
-                    <h4 class="font-bold">Hans M., 58</h4>
-                    <div class="text-yellow-500">★★★★★</div>
-                  </div>
+            <h2 class="text-2xl font-bold text-foreground mb-4 mt-8">Vertrauen durch Erfahrung</h2>
+            <p class="text-lg leading-relaxed mb-6">
+                Mehr als 400.000 Anwender in Deutschland berichten von positiven Ergebnissen.
+                <br/><br/>
+                Flexosamine ist inzwischen ein echter Geheimtipp – und längst kein Insiderprodukt mehr.
+                <br/>
+                <em>„Ich war einer von ihnen – heute bin ich wieder frei."</em>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Order Section -->
+      <section class="bg-gradient-to-br from-red-50 to-orange-50 py-12 border-t-4 border-red-500">
+        <div class="container mx-auto px-4">
+          <div class="max-w-md mx-auto">
+            <div class="bg-background shadow-xl border-2 border-red-200 rounded-lg">
+              <div class="p-8">
+                <div class="text-center mb-6">
+                  <h2 class="text-2xl font-bold text-foreground mb-2">
+                    Jetzt handeln – bevor es zu spät ist
+                  </h2>
+                  <p class="text-red-600 font-semibold mb-4">
+                    Angebot läuft ab in:
+                  </p>
+                  <div class="text-3xl font-mono font-bold text-red-600" id="timer">23:59:59</div>
                 </div>
-                <p class="text-gray-700">"Endlich kann ich wieder schmerzfrei spazieren gehen. Flexosamine ist ein Wunder!"</p>
-              </div>
-              
-              <div class="bg-gray-50 p-6 rounded-lg">
-                <div class="flex items-center mb-4">
-                  <img src="./img/commenter-monika.jpg" alt="Monika" class="w-12 h-12 rounded-full mr-4">
-                  <div>
-                    <h4 class="font-bold">Monika S., 62</h4>
-                    <div class="text-yellow-500">★★★★★</div>
-                  </div>
+                
+                <div class="mb-8">
+                    <img src="./lovable-uploads/photo_2025-08-06_13-33-44.jpg" alt="Flexosamine Produktbild" class="w-full h-auto object-cover rounded-lg" />
                 </div>
-                <p class="text-gray-700">"Nach 3 Wochen waren meine Knieschmerzen komplett weg. Unglaublich!"</p>
-              </div>
-            </div>
 
-            <div id="order" class="bg-blue-600 text-white p-8 rounded-lg text-center my-12">
-              <h2 class="text-3xl font-bold mb-6">Bestellen Sie jetzt!</h2>
-              <form class="max-w-md mx-auto space-y-4">
-                <input type="text" placeholder="Ihr Name" class="w-full p-3 rounded text-black" required>
-                <input type="tel" placeholder="Ihre Telefonnummer" class="w-full p-3 rounded text-black" required>
-                <button type="submit" class="w-full bg-green-600 text-white p-4 rounded-lg text-xl font-bold hover:bg-green-700 transition-colors">
-                  Jetzt bestellen - 50% Rabatt sichern!
-                </button>
-              </form>
-              <p class="text-sm mt-4 opacity-90">Kostenlose Lieferung • 30 Tage Geld-zurück-Garantie</p>
+                <form class="space-y-4" onsubmit="alert('Bestellung erfolgreich!'); return false;">
+                  <div>
+                    <label for="name" class="block text-sm font-medium text-foreground mb-1">
+                      Ihr Name *
+                    </label>
+                    <input id="name" type="text" required class="w-full px-3 py-2 border border-border rounded-md" placeholder="Vorname Nachname" />
+                  </div>
+                  
+                  <div>
+                    <label for="phone" class="block text-sm font-medium text-foreground mb-1">
+                      Ihre Telefonnummer *
+                    </label>
+                    <input id="phone" type="tel" required class="w-full px-3 py-2 border border-border rounded-md" placeholder="+49..." />
+                  </div>
+
+                  <div class="text-center pt-4">
+                    <p class="text-sm text-foreground mb-3 font-medium">
+                      📦 Flexosamine – bereits über 400.000 Mal verkauft in Deutschland!
+                    </p>
+                    <p class="text-lg text-primary font-bold mb-4">🎁 Sonderaktion: Jetzt 50 % Rabatt sichern</p>
+                    <p class="text-sm text-muted-foreground mb-4">🕒 Nur für kurze Zeit – begrenzte Verfügbarkeit</p>
+                    
+                    <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold text-lg py-3 px-4 rounded-md animate-pulse">
+                      JETZT BESTELLEN
+                    </button>
+                    
+                    <div class="mt-4 space-y-2 text-sm text-green-700">
+                        <p>✅ TÜV geprüft</p>
+                        <p>✅ Von Ärzten empfohlen</p>
+                        <p>✅ 100 % natürliche Inhaltsstoffe</p>
+                        <p>✅ Hergestellt in Deutschland</p>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
-        </article>
-      </main>
-      
-      <footer class="bg-gray-800 text-white py-8">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-          <p>&copy; 2025 Gesundheitsmagazin. Alle Rechte vorbehalten.</p>
+        </div>
+      </section>
+
+      <!-- Comments Section -->
+      <section class="py-8 bg-background">
+        <div class="container mx-auto px-4">
+          <div class="max-w-4xl mx-auto">
+            <h3 class="text-xl font-bold text-foreground mb-6">Leser-Kommentare</h3>
+            
+            <div class="space-y-6">
+              <div class="border-b border-border pb-6">
+                <div class="flex items-start gap-3">
+                  <img src="./img/commenter-hans.jpg" alt="Peter M." class="w-10 h-10 rounded-full object-cover" />
+                  <div class="flex-1">
+                    <div class="flex items-center gap-2 mb-2">
+                      <span class="font-semibold text-foreground">Peter M. (71), Nürnberg</span>
+                    </div>
+                    <p class="text-foreground">
+                      „Ich konnte meine Frau nicht mal mehr umarmen – heute gehen wir wieder spazieren."
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="border-b border-border pb-6">
+                <div class="flex items-start gap-3">
+                  <img src="./img/commenter-monika.jpg" alt="Jürgen S." class="w-10 h-10 rounded-full object-cover" />
+                  <div class="flex-1">
+                    <div class="flex items-center gap-2 mb-2">
+                      <span class="font-semibold text-foreground">Jürgen S. (66), Hamburg</span>
+                    </div>
+                    <p class="text-foreground">
+                      „Schmerz war mein Alltag. Heute ist Ruhe mein neuer Zustand."
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="border-b border-border pb-6">
+                <div class="flex items-start gap-3">
+                  <img src="./img/commenter-klaus.jpg" alt="Andreas W." class="w-10 h-10 rounded-full object-cover" />
+                  <div class="flex-1">
+                    <div class="flex items-center gap-2 mb-2">
+                      <span class="font-semibold text-foreground">Andreas W. (59), Berlin</span>
+                    </div>
+                    <p class="text-foreground">
+                      „Boris hatte recht. Dieses Gel ist kein Werbegag – es wirkt."
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="border-b border-border pb-6">
+                <div class="flex items-start gap-3">
+                  <img src="./img/commenter-sabine.jpg" alt="Helga R." class="w-10 h-10 rounded-full object-cover" />
+                  <div class="flex-1">
+                    <div class="flex items-center gap-2 mb-2">
+                      <span class="font-semibold text-foreground">Helga R. (68), Bremen</span>
+                    </div>
+                    <p class="text-foreground">
+                      „Ich konnte 5 Jahre lang keine Nacht durchschlafen – meine Hüfte war wie Feuer. Ich habe Gehhilfe benutzt. Nach 2 Wochen mit Flexosamine – ich brauche sie nicht mehr. Ich laufe wieder!"
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="bg-muted border-t border-border py-8">
+        <div class="container mx-auto px-4">
+          <div class="max-w-6xl mx-auto text-center">
+            <p class="text-muted-foreground">&copy; 2025 Gesundheitsmagazin. Alle Rechte vorbehalten.</p>
+          </div>
         </div>
       </footer>
+      
+      <script>
+        // Timer countdown
+        function updateTimer() {
+          const timer = document.getElementById('timer');
+          const now = new Date().getTime();
+          const endTime = now + (24 * 60 * 60 * 1000); // 24 hours from now
+          
+          setInterval(() => {
+            const currentTime = new Date().getTime();
+            const timeLeft = endTime - currentTime;
+            
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+            
+            timer.innerHTML = String(hours).padStart(2, '0') + ':' + 
+                             String(minutes).padStart(2, '0') + ':' + 
+                             String(seconds).padStart(2, '0');
+          }, 1000);
+        }
+        updateTimer();
+      </script>
     </div>
   `;
 }
