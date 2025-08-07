@@ -10,6 +10,7 @@ import monikaImage from "@/assets/commenter-monika.jpg";
 import klausImage from "@/assets/commenter-klaus.jpg";
 import sabineImage from "@/assets/commenter-sabine.jpg";
 import { useState, useEffect } from "react";
+
 const Article = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -31,10 +32,10 @@ const Article = () => {
             </span>
           </div>
           
-          <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-6 leading-tight">Ich war gelähmt vor Schmerz. Jetzt bewege ich mich wieder wie früher
-Erfahrungsbericht von Boris Becker – Ex-Tennisstar spricht offen über seine Gelenkhölle</h1>
+          <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-6 leading-tight">„Ich war gelähmt vor Schmerz. Jetzt bewege ich mich wieder wie früher.“</h1>
+          <p className="text-xl text-muted-foreground">Erfahrungsbericht von Boris Becker – Ex-Tennisstar spricht offen über seine Gelenkhölle</p>
           
-          <div className="text-sm text-muted-foreground mb-4">
+          <div className="text-sm text-muted-foreground mb-4 mt-6">
             Von <span className="text-primary font-medium">Dr. Maria Schmidt</span> (Rheumatolgin) • 
             Medizinische Prüfung: <span className="text-primary font-medium">Prof. Dr. Hans Weber</span> • 
             07.08.2025
@@ -47,98 +48,121 @@ Erfahrungsbericht von Boris Becker – Ex-Tennisstar spricht offen über seine G
         <div className="max-w-4xl mx-auto">
           <div className="prose prose-lg max-w-none">
             <div className="mb-8">
-              <img src="/lovable-uploads/efeb78ca-317c-456d-b1f8-543002fb5fdb.png" alt="Gelenkschmerzen im Alter" className="w-full h-96 md:h-[500px] object-cover rounded-lg" />
+              <img src="/lovable-uploads/efeb78ca-317c-456d-b1f8-543002fb5fdb.png" alt="Boris Becker" className="w-full h-auto object-cover rounded-lg" />
             </div>
             
+            <h2 className="text-2xl font-bold text-foreground mb-4 mt-8">Persönlicher Einstieg</h2>
             <p className="text-lg leading-relaxed mb-6">
-              <strong>Erfahrungsbericht von Boris Becker – Ex-Tennisstar spricht offen über seine Gelenkhölle</strong> Besonders Menschen über 50 
-              kennen das Problem: Morgens sind die Finger steif, die Knie schmerzen beim Treppensteigen, 
-              der Rücken macht sich nach langem Sitzen bemerkbar. Doch was steckt dahinter und welche 
-              Behandlungsmöglichkeiten gibt es wirklich?
+              <strong>„Ich hatte alles. Doch ich verlor das Wichtigste: meine Beweglichkeit.“</strong>
+              <br/>
+              Ich bin Boris Becker. Ich habe große Turniere gewonnen, für mein Land gespielt, unzählige Stunden auf dem Platz verbracht.
+              <br/><br/>
+              Doch der härteste Kampf meines Lebens begann nach meiner Karriere – und nicht mit einem Schläger in der Hand.
+              <br/><br/>
+              Es begann schleichend. Schmerzen im Knie, ein steifer Rücken, brennende Finger.
+              <br/>
+              <em>„Ich konnte mir kaum noch selbst die Socken anziehen.“</em>
+              <br/><br/>
+              Sport? Unmöglich.
+              <br/>
+              Spazieren? Nur unter Schmerzen.
+              <br/>
+              Schlafen? Unruhig, unterbrochen, verzweifelt.
             </p>
             
-            <h2 className="text-2xl font-bold text-foreground mb-4 mt-8">Persönlicher Einstieg
-Ich hatte alles. Doch ich verlor das Wichtigste: meine Beweglichkeit.</h2>
-            
+            <h2 className="text-2xl font-bold text-foreground mb-4 mt-8">Der medizinische Teufelskreis</h2>
             <p className="text-lg leading-relaxed mb-6">
-              <strong>Arthrose</strong> ist die häufigste Gelenkerkrankung überhaupt. Dabei nutzt sich der 
-              Knorpel in den Gelenken ab - ein natürlicher Alterungsprozess, der jedoch durch verschiedene 
-              Faktoren beschleunigt werden kann:
+              <strong>„Nichts hat langfristig geholfen.“</strong>
+              <br/>
+              Ich habe alles versucht:
             </p>
-            
             <ul className="list-disc list-inside mb-6 space-y-2">
-              <li>Übergewicht belastet die tragenden Gelenke</li>
-              <li>Mangelnde Bewegung schwächt die stützende Muskulatur</li>
-              <li>Einseitige Belastungen im Beruf oder Sport</li>
-              <li>Genetische Veranlagung</li>
-              <li>Frühere Verletzungen oder Operationen</li>
+              <li>Tabletten</li>
+              <li>Kortison</li>
+              <li>Spritzen</li>
+              <li>Physiotherapie</li>
+            </ul>
+            <p className="text-lg leading-relaxed mb-6">
+              Manches half kurz. Doch die Schmerzen kamen immer wieder – härter und tiefer als zuvor.
+              <br/><br/>
+              Ich begann zu akzeptieren: „Das ist eben das Alter.“
+              <br/><br/>
+              Aber innerlich wehrte ich mich.
+              <br/>
+              <em>„Ich wollte mein Leben zurück. Nicht morgen. Jetzt.“</em>
+            </p>
+
+            <h2 className="text-2xl font-bold text-foreground mb-4 mt-8">Die Empfehlung – Flexosamine</h2>
+            <p className="text-lg leading-relaxed mb-6">
+              <strong>„Ein Tipp eines Arztes hat alles verändert.“</strong>
+              <br/>
+              Ein befreundeter Arzt, selbst ehemaliger Leistungssportler, sagte mir klipp und klar:
+              <br/>
+              <em>„Du brauchst keine OP. Du brauchst Regeneration – von innen.“</em>
+              <br/><br/>
+              Seine Empfehlung: <strong>Flexosamine</strong> – ein Gelenk-Gel mit neuartiger Wirkformel.
+            </p>
+            <ul className="list-disc list-inside mb-6 space-y-2">
+              <li>Dringt tief in das Gewebe ein</li>
+              <li>Unterstützt Knorpelregeneration</li>
+              <li>Lindert Entzündungen & Schwellungen</li>
+              <li>Verbessert Beweglichkeit</li>
+            </ul>
+            <p className="text-lg leading-relaxed mb-6">
+              Natürlich. Ohne Tabletten. Ohne Nebenwirkungen.
+            </p>
+
+            <h2 className="text-2xl font-bold text-foreground mb-4 mt-8">Die Anwendung – und der Effekt</h2>
+            <p className="text-lg leading-relaxed mb-6">
+              <strong>„Ich spürte die Wirkung früher, als ich dachte.“</strong>
+              <br/>
+              Ich begann, morgens und abends Flexosamine auf Knie, Rücken und Hände aufzutragen.
+              <br/><br/>
+              Ohne Erwartungen – aber mit Hoffnung.
+              <br/><br/>
+              Und dann passierte es:
+            </p>
+            <ul className="list-disc list-inside mb-6 space-y-2">
+              <li>✅ Nach 3 Tagen – weniger Steifheit</li>
+              <li>✅ Nach 6 Tagen – ruhiger Schlaf, ohne ständiges Aufwachen</li>
+              <li>✅ Nach 2 Wochen – wieder Spaziergänge möglich</li>
+              <li>✅ Nach 3 Wochen – ich stand wieder auf dem Tennisplatz</li>
+            </ul>
+            <p className="text-lg leading-relaxed mb-6">
+              <em>„Nicht für ein Turnier. Sondern für mich. Für mein Leben.“</em>
+            </p>
+
+            <h2 className="text-2xl font-bold text-foreground mb-4 mt-8">Für wen ist Flexosamine geeignet?</h2>
+            <ul className="list-disc list-inside mb-6 space-y-2">
+              <li>Menschen mit Gelenkverschleiß</li>
+              <li>Senioren mit eingeschränkter Beweglichkeit</li>
+              <li>Ehemalige Sportler mit alten Verletzungen</li>
+              <li>Menschen mit Schmerzen durch Arbeit oder Haltung</li>
+            </ul>
+            <p className="text-lg leading-relaxed mb-6">
+              <em>„Ich empfehle es jedem, der noch Hoffnung hat – und nicht aufgeben will.“</em>
+            </p>
+            
+            <h2 className="text-2xl font-bold text-foreground mb-4 mt-8">Was ist Flexosamine?</h2>
+            <p className="text-lg leading-relaxed mb-6">
+              Flexosamine ist ein therapeutisches Gel, entwickelt in Deutschland, mit einer hochkonzentrierten Formel auf natürlicher Basis.
+            </p>
+            <ul className="list-none mb-6 space-y-2">
+                <li>💡 Anwendung: 2× täglich lokal auftragen</li>
+                <li>🌿 100 % Naturformel</li>
+                <li>🔬 Von Ärzten empfohlen</li>
+                <li>✅ TÜV-geprüft</li>
+                <li>🚫 Keine bekannten Nebenwirkungen</li>
             </ul>
 
+            <h2 className="text-2xl font-bold text-foreground mb-4 mt-8">Vertrauen durch Erfahrung</h2>
             <p className="text-lg leading-relaxed mb-6">
-              <strong>Arthritis</strong> hingegen ist eine entzündliche Erkrankung, die oft schubweise verläuft 
-              und verschiedene Ursachen haben kann - von Autoimmunreaktionen bis hin zu Infektionen.
+                Mehr als 400.000 Anwender in Deutschland berichten von positiven Ergebnissen.
+                <br/><br/>
+                Flexosamine ist inzwischen ein echter Geheimtipp – und längst kein Insiderprodukt mehr.
+                <br/>
+                <em>„Ich war einer von ihnen – heute bin ich wieder frei.“</em>
             </p>
-
-            <h2 className="text-2xl font-bold text-foreground mb-4 mt-8">
-              Was Betroffene wirklich hilft
-            </h2>
-            
-            <h3 className="text-xl font-semibold text-foreground mb-3">
-              1. Bewegung ist das A und O
-            </h3>
-            <p className="text-lg leading-relaxed mb-6">
-              Paradoxerweise ist Bewegung bei Gelenkschmerzen oft das Beste, was Sie tun können. 
-              Gelenkschonende Sportarten wie Schwimmen, Radfahren oder Nordic Walking halten die 
-              Gelenke beweglich und stärken die umgebende Muskulatur.
-            </p>
-
-            <h3 className="text-xl font-semibold text-foreground mb-3">
-              2. Gewichtsreduktion entlastet
-            </h3>
-            <p className="text-lg leading-relaxed mb-6">
-              Jedes Kilogramm weniger auf der Waage entlastet die Knie um etwa vier Kilogramm. 
-              Eine moderate Gewichtsabnahme kann daher erheblich zur Schmerzlinderung beitragen.
-            </p>
-
-            <h3 className="text-xl font-semibold text-foreground mb-3">
-              3. Wärme und Kälte gezielt einsetzen
-            </h3>
-            <p className="text-lg leading-relaxed mb-6">
-              Bei akuten Entzündungen hilft Kälte, bei chronischen Beschwerden und Steifheit 
-              ist Wärme oft wohltuend. Finden Sie heraus, was Ihnen persönlich guttut.
-            </p>
-
-            <h3 className="text-xl font-semibold text-foreground mb-3">
-              4. Ernährung kann Entzündungen beeinflussen
-            </h3>
-            <p className="text-lg leading-relaxed mb-6">
-              Omega-3-Fettsäuren aus Fisch, Antioxidantien aus buntem Gemüse und Obst sowie 
-              weniger verarbeitete Lebensmittel können entzündliche Prozesse im Körper reduzieren.
-            </p>
-
-            <h2 className="text-2xl font-bold text-foreground mb-4 mt-8">
-              Wann sollten Sie zum Arzt?
-            </h2>
-            
-            <p className="text-lg leading-relaxed mb-6">
-              Suchen Sie ärztliche Hilfe, wenn:
-            </p>
-            
-            <ul className="list-disc list-inside mb-6 space-y-2">
-              <li>Schmerzen länger als eine Woche anhalten</li>
-              <li>Gelenke anschwellen oder sich warm anfühlen</li>
-              <li>Die Beweglichkeit stark eingeschränkt ist</li>
-              <li>Schmerzmittel nicht mehr helfen</li>
-              <li>Sie nachts vor Schmerzen nicht schlafen können</li>
-            </ul>
-
-            <div className="bg-blue-50 border-l-4 border-blue-400 p-6 mb-6">
-              <h4 className="font-semibold mb-2">Wichtiger Hinweis:</h4>
-              <p className="text-sm">
-                Dieser Artikel ersetzt keine medizinische Beratung. Bei anhaltenden Beschwerden 
-                konsultieren Sie immer einen Arzt oder eine Ärztin.
-              </p>
-            </div>
           </div>
         </div>
       </section>
@@ -151,7 +175,7 @@ Ich hatte alles. Doch ich verlor das Wichtigste: meine Beweglichkeit.</h2>
               <CardContent className="p-8">
                 <div className="text-center mb-6">
                   <h2 className="text-2xl font-bold text-foreground mb-2">
-                    Limitiertes Angebot!
+                    Jetzt handeln – bevor es zu spät ist
                   </h2>
                   <p className="text-red-600 font-semibold mb-4">
                     Angebot läuft ab in:
@@ -182,30 +206,20 @@ Ich hatte alles. Doch ich verlor das Wichtigste: meine Beweglichkeit.</h2>
 
                   <div className="text-center pt-4">
                     <p className="text-sm text-foreground mb-3 font-medium">
-                      Flexosamin — bereits über 400.000 mal in Deutschland verkauft
+                      📦 Flexosamine – bereits über 400.000 Mal verkauft in Deutschland!
                     </p>
+                    <p className="text-lg text-primary font-bold mb-4">🎁 Sonderaktion: Jetzt 50 % Rabatt sichern</p>
+                    <p className="text-sm text-muted-foreground mb-4">🕒 Nur für kurze Zeit – begrenzte Verfügbarkeit</p>
                     
                     <Button type="submit" size="lg" className="w-full bg-red-600 hover:bg-red-700 text-white font-bold text-lg py-3 h-auto animate-pulse">
-                      Jetzt bestellen
+                      JETZT BESTELLEN
                     </Button>
                     
-                    <div className="mt-4 space-y-2">
-                      <div className="flex items-center justify-center gap-4 text-sm text-green-700">
-                        <span className="flex items-center gap-1">
-                          <span className="text-green-600">✅</span>
-                          TÜV geprüft
-                        </span>
-                        <span className="flex items-center gap-1">
-                          <span className="text-green-600">✅</span>
-                          Von Ärzten empfohlen
-                        </span>
-                      </div>
-                      <div className="flex items-center justify-center text-sm text-green-700">
-                        <span className="flex items-center gap-1">
-                          <span className="text-green-600">✅</span>
-                          100% Natur
-                        </span>
-                      </div>
+                    <div className="mt-4 space-y-2 text-sm text-green-700">
+                        <p>✅ TÜV geprüft</p>
+                        <p>✅ Von Ärzten empfohlen</p>
+                        <p>✅ 100 % natürliche Inhaltsstoffe</p>
+                        <p>✅ Hergestellt in Deutschland</p>
                     </div>
                   </div>
                 </form>
@@ -219,20 +233,18 @@ Ich hatte alles. Doch ich verlor das Wichtigste: meine Beweglichkeit.</h2>
       <section className="py-8 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h3 className="text-xl font-bold text-foreground mb-6">Kommentare (23)</h3>
+            <h3 className="text-xl font-bold text-foreground mb-6">Leser-Kommentare</h3>
             
             <div className="space-y-6">
               <div className="border-b border-border pb-6">
                 <div className="flex items-start gap-3">
-                  <img src={hansImage} alt="Hans M." className="w-10 h-10 rounded-full object-cover" />
+                  <img src={hansImage} alt="Peter M." className="w-10 h-10 rounded-full object-cover" />
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
-                      <span className="font-semibold text-foreground">Hans M., 67</span>
-                      <span className="text-muted-foreground text-sm">vor 2 Stunden</span>
+                      <span className="font-semibold text-foreground">Peter M. (71), Nürnberg</span>
                     </div>
                     <p className="text-foreground">
-                      Danke für diesen informativen Artikel! Als Rentner mit Knieproblemen kann ich nur bestätigen, 
-                      dass regelmäßige Bewegung wirklich hilft. Schwimmen hat mir sehr geholfen.
+                      „Ich konnte meine Frau nicht mal mehr umarmen – heute gehen wir wieder spazieren.“
                     </p>
                   </div>
                 </div>
@@ -240,15 +252,13 @@ Ich hatte alles. Doch ich verlor das Wichtigste: meine Beweglichkeit.</h2>
 
               <div className="border-b border-border pb-6">
                 <div className="flex items-start gap-3">
-                  <img src={monikaImage} alt="Monika S." className="w-10 h-10 rounded-full object-cover" />
+                  <img src={monikaImage} alt="Jürgen S." className="w-10 h-10 rounded-full object-cover" />
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
-                      <span className="font-semibold text-foreground">Monika S., 54</span>
-                      <span className="text-muted-foreground text-sm">vor 5 Stunden</span>
+                      <span className="font-semibold text-foreground">Jürgen S. (66), Hamburg</span>
                     </div>
                     <p className="text-foreground">
-                      Sehr hilfreicher Artikel! Ich arbeite als Krankenschwester und die Belastung macht sich in den 
-                      Gelenken bemerkbar. Die Tipps zur Ernährung werde ich definitiv befolgen.
+                      „Schmerz war mein Alltag. Heute ist Ruhe mein neuer Zustand.“
                     </p>
                   </div>
                 </div>
@@ -256,15 +266,13 @@ Ich hatte alles. Doch ich verlor das Wichtigste: meine Beweglichkeit.</h2>
 
               <div className="border-b border-border pb-6">
                 <div className="flex items-start gap-3">
-                  <img src={klausImage} alt="Klaus W." className="w-10 h-10 rounded-full object-cover" />
+                  <img src={klausImage} alt="Andreas W." className="w-10 h-10 rounded-full object-cover" />
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
-                      <span className="font-semibold text-foreground">Klaus W., 72</span>
-                      <span className="text-muted-foreground text-sm">vor 1 Tag</span>
+                      <span className="font-semibold text-foreground">Andreas W. (59), Berlin</span>
                     </div>
                     <p className="text-foreground">
-                      Endlich mal ein Artikel, der nicht nur Medikamente empfiehlt! Als ehemaliger Handwerker 
-                      spüre ich jeden Tag meine Gelenke. Werde den Tipp mit der Gewichtsreduktion ernst nehmen.
+                      „Boris hatte recht. Dieses Gel ist kein Werbegag – es wirkt.“
                     </p>
                   </div>
                 </div>
@@ -272,15 +280,103 @@ Ich hatte alles. Doch ich verlor das Wichtigste: meine Beweglichkeit.</h2>
 
               <div className="border-b border-border pb-6">
                 <div className="flex items-start gap-3">
-                  <img src={sabineImage} alt="Sabine K." className="w-10 h-10 rounded-full object-cover" />
+                  <img src={sabineImage} alt="Helga R." className="w-10 h-10 rounded-full object-cover" />
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
-                      <span className="font-semibold text-foreground">Sabine K., 49</span>
-                      <span className="text-muted-foreground text-sm">vor 2 Tagen</span>
+                      <span className="font-semibold text-foreground">Helga R. (68), Bremen</span>
                     </div>
                     <p className="text-foreground">
-                      Meine Mutter leidet seit Jahren unter Arthrose. Dieser Artikel gibt mir Hoffnung, 
-                      dass es natürliche Wege gibt, ihr zu helfen. Vielen Dank für die wertvollen Informationen!
+                      „Ich konnte 5 Jahre lang keine Nacht durchschlafen – meine Hüfte war wie Feuer. Ich habe Gehhilfe benutzt. Nach 2 Wochen mit Flexosamine – ich brauche sie nicht mehr. Ich laufe wieder!“
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border-b border-border pb-6">
+                <div className="flex items-start gap-3">
+                  {/* You can add a placeholder image here */}
+                  <div className="w-10 h-10 rounded-full bg-muted"></div>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="font-semibold text-foreground">Frank T. (62), Hannover</span>
+                    </div>
+                    <p className="text-foreground">
+                      „Meine Knie waren zerstört. Treppensteigen? Unmöglich. Ich war kurz davor, mich operieren zu lassen. Jetzt nehme ich Flexosamine – und gehe jeden Tag 30 Minuten spazieren. Ohne Schmerzen.“
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border-b border-border pb-6">
+                <div className="flex items-start gap-3">
+                  {/* You can add a placeholder image here */}
+                  <div className="w-10 h-10 rounded-full bg-muted"></div>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="font-semibold text-foreground">Ingrid B. (73), München</span>
+                    </div>
+                    <p className="text-foreground">
+                      „Nach 3 Jahren ständiger Schmerzen in den Fingern konnte ich meine Stricknadeln nicht mehr halten. Ich hatte aufgegeben. Jetzt stricke ich wieder – täglich. Flexosamine hat mir mein Leben zurückgegeben.“
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border-b border-border pb-6">
+                <div className="flex items-start gap-3">
+                  {/* You can add a placeholder image here */}
+                  <div className="w-10 h-10 rounded-full bg-muted"></div>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="font-semibold text-foreground">Matthias K. (58), Leipzig</span>
+                    </div>
+                    <p className="text-foreground">
+                      „Ich hatte chronischen Rückenschmerz seit über 10 Jahren. Alles ausprobiert – nichts half. Flexosamine hat in 4 Tagen mehr gebracht als 10 Jahre Therapie.“
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border-b border-border pb-6">
+                <div className="flex items-start gap-3">
+                  {/* You can add a placeholder image here */}
+                  <div className="w-10 h-10 rounded-full bg-muted"></div>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="font-semibold text-foreground">Renate P. (65), Mainz</span>
+                    </div>
+                    <p className="text-foreground">
+                      „Ich brauchte morgens 40 Minuten, um mich zu bewegen. Alles war steif und geschwollen. Jetzt bin ich in 5 Minuten im Garten – ohne Schmerzen, ohne Medikamente.“
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border-b border-border pb-6">
+                <div className="flex items-start gap-3">
+                  {/* You can add a placeholder image here */}
+                  <div className="w-10 h-10 rounded-full bg-muted"></div>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="font-semibold text-foreground">Kurt H. (74), Stuttgart</span>
+                    </div>
+                    <p className="text-foreground">
+                      „Ich habe 20 Jahre auf dem Bau gearbeitet. Meine Gelenke waren hin. Ich dachte, mein Körper sei am Ende. Flexosamine war mein letzter Versuch – und es war der richtige. Keine Schmerzen mehr.“
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border-b border-border pb-6">
+                <div className="flex items-start gap-3">
+                  {/* You can add a placeholder image here */}
+                  <div className="w-10 h-10 rounded-full bg-muted"></div>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="font-semibold text-foreground">Beate S. (60), Düsseldorf</span>
+                    </div>
+                    <p className="text-foreground">
+                      „Ich konnte meine Enkel nicht mehr hochheben – meine Arme und Schultern waren wie blockiert. Nach 10 Tagen Flexosamine war ich wieder die Oma, die ich sein wollte.“
                     </p>
                   </div>
                 </div>
