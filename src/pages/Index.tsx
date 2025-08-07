@@ -157,23 +157,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="bg-medical-gray py-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">
-              Отзывы пользователей
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Что говорят наши пациенты и врачи
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {testimonials.map((testimonial, index) => <Testimonial key={index} content={testimonial.content} author={testimonial.author} role={testimonial.role} rating={testimonial.rating} avatar={testimonial.avatar} />)}
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="container mx-auto px-4 py-16">
