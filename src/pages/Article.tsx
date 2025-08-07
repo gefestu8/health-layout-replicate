@@ -92,6 +92,10 @@ const Article = () => {
               <em>„Ich wollte mein Leben zurück. Nicht morgen. Jetzt.“</em>
             </p>
 
+            <div className="mb-8">
+              <img src="/lovable-uploads/DeWatermark.ai_1754506600916.jpeg" alt="Boris Becker mit Krücken" className="w-full h-auto object-cover rounded-lg" />
+            </div>
+
             <h2 className="text-2xl font-bold text-foreground mb-4 mt-8">Die Empfehlung – Flexosamine</h2>
             <p className="text-lg leading-relaxed mb-6">
               <strong>„Ein Tipp eines Arztes hat alles verändert.“</strong>
@@ -182,6 +186,10 @@ const Article = () => {
                   </p>
                   <Timer />
                 </div>
+                
+                <div className="mb-8">
+                    <img src="/lovable-uploads/photo_2025-08-06_13-33-44.jpg" alt="Flexosamine Produktbild" className="w-full h-auto object-cover rounded-lg" />
+                </div>
 
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
@@ -244,7 +252,7 @@ const Article = () => {
                       <span className="font-semibold text-foreground">Peter M. (71), Nürnberg</span>
                     </div>
                     <p className="text-foreground">
-                      „Ich konnte meine Frau nicht mal mehr umarmen – heute gehen wir wieder spazieren.“
+                      Meine Knie waren zerstört. Treppensteigen? Unmöglich. Ich war kurz davor, mich operieren zu lassen. Jetzt nehme ich Flexosamine – und gehe jeden Tag 30 Minuten spazieren. Ohne Schmerzen
                     </p>
                   </div>
                 </div>
@@ -255,10 +263,10 @@ const Article = () => {
                   <img src={monikaImage} alt="Jürgen S." className="w-10 h-10 rounded-full object-cover" />
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
-                      <span className="font-semibold text-foreground">Jürgen S. (66), Hamburg</span>
+                      <span className="font-semibold text-foreground">Matthias K. (66), Hamburg</span>
                     </div>
                     <p className="text-foreground">
-                      „Schmerz war mein Alltag. Heute ist Ruhe mein neuer Zustand.“
+                      Ich brauchte morgens 40 Minuten, um mich zu bewegen. Alles war steif und geschwollen. Jetzt bin ich in 5 Minuten im Garten – ohne Schmerzen, ohne Medikamente
                     </p>
                   </div>
                 </div>
@@ -272,7 +280,7 @@ const Article = () => {
                       <span className="font-semibold text-foreground">Andreas W. (59), Berlin</span>
                     </div>
                     <p className="text-foreground">
-                      „Boris hatte recht. Dieses Gel ist kein Werbegag – es wirkt.“
+                      Ich hatte chronischen Rückenschmerz seit über 10 Jahren. Alles ausprobiert – nichts half. Flexosamine hat in 4 Tagen mehr gebracht als 10 Jahre Therapie
                     </p>
                   </div>
                 </div>
@@ -283,10 +291,10 @@ const Article = () => {
                   <img src={sabineImage} alt="Helga R." className="w-10 h-10 rounded-full object-cover" />
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
-                      <span className="font-semibold text-foreground">Helga R. (68), Bremen</span>
+                      <span className="font-semibold text-foreground">Ingrid B. (68), Bremen</span>
                     </div>
                     <p className="text-foreground">
-                      „Ich konnte 5 Jahre lang keine Nacht durchschlafen – meine Hüfte war wie Feuer. Ich habe Gehhilfe benutzt. Nach 2 Wochen mit Flexosamine – ich brauche sie nicht mehr. Ich laufe wieder!“
+                      Nach 3 Jahren ständiger Schmerzen in den Fingern konnte ich meine Stricknadeln nicht mehr halten. Ich hatte aufgegeben. Jetzt stricke ich wieder – täglich. Flexosamine hat mir mein Leben zurückgegeben
                     </p>
                   </div>
                 </div>
