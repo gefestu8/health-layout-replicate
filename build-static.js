@@ -192,79 +192,79 @@ function generateArticleHTML() {
 <body>
     <div class="min-h-screen bg-background">
       <!-- Header -->
-      <header style="background-color: hsl(var(--background));">
-        <div style="max-width: 1200px; margin: 0 auto;">
+      <header class="bg-background">
+        <div class="max-w-7xl mx-auto">
           <!-- Top bar -->
-          <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 16px; font-size: 0.75rem; border-bottom: 1px solid hsl(var(--border));">
+          <div class="flex justify-between items-center py-2 px-4 text-xs border-b border-border">
             <div></div>
-            <div style="display: flex; align-items: center; gap: 24px;">
-              <span style="color: hsl(var(--muted-foreground)); cursor: pointer;">REGISTRIEREN</span>
-              <span style="color: hsl(var(--muted-foreground)); cursor: pointer;">LOGIN</span>
-              <span style="color: hsl(var(--muted-foreground)); cursor: pointer;">NEWSLETTER BESTELLEN</span>
-              <span style="color: hsl(var(--muted-foreground)); cursor: pointer;">BÜCHER</span>
-              <div style="display: flex; align-items: center; gap: 8px; margin-left: 16px;">
-                <svg width="16" height="16" fill="currentColor" style="color: hsl(var(--muted-foreground));" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                <svg width="16" height="16" fill="currentColor" style="color: hsl(var(--muted-foreground));" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                <svg width="16" height="16" fill="currentColor" style="color: hsl(var(--muted-foreground));" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                <svg width="16" height="16" fill="currentColor" style="color: hsl(var(--muted-foreground));" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            <div class="flex items-center gap-6">
+              <span class="text-muted-foreground hover:text-foreground cursor-pointer">REGISTRIEREN</span>
+              <span class="text-muted-foreground hover:text-foreground cursor-pointer">LOGIN</span>
+              <span class="text-muted-foreground hover:text-foreground cursor-pointer">NEWSLETTER BESTELLEN</span>
+              <span class="text-muted-foreground hover:text-foreground cursor-pointer">BÜCHER</span>
+              <div class="flex items-center gap-2 ml-4">
+                <svg width="16" height="16" fill="currentColor" class="text-muted-foreground hover:text-foreground cursor-pointer" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                <svg width="16" height="16" fill="currentColor" class="text-muted-foreground hover:text-foreground cursor-pointer" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                <svg width="16" height="16" fill="currentColor" class="text-muted-foreground hover:text-foreground cursor-pointer" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                <svg width="16" height="16" fill="currentColor" class="text-muted-foreground hover:text-foreground cursor-pointer" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
               </div>
             </div>
           </div>
           
           <!-- Main header -->
-          <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px;">
-            <div style="display: flex; align-items: center;">
-              <div style="display: flex; align-items: center;">
-                <div style="background-color: #dc2626; color: white; padding: 8px; border-radius: 4px; margin-right: 12px;">
-                  <div style="width: 24px; height: 24px; background-color: white; border-radius: 4px; display: flex; align-items: center; justify-content: center;">
-                    <div style="width: 16px; height: 16px; background-color: #dc2626; border-radius: 4px;"></div>
+          <div class="flex items-center justify-between py-4 px-4">
+            <div class="flex items-center">
+              <div class="flex items-center">
+                <div class="bg-red-600 text-white p-2 rounded-sm mr-3">
+                  <div class="w-6 h-6 bg-white rounded-sm flex items-center justify-center">
+                    <div class="w-4 h-4 bg-red-600 rounded-sm"></div>
                   </div>
                 </div>
                 <div>
-                  <div style="color: #dc2626; font-weight: bold; font-size: 1.25rem;">APOTHEKEN</div>
-                  <div style="color: #dc2626; font-weight: bold; font-size: 1.25rem;">Umschau</div>
-                  <div style="font-size: 0.75rem; color: hsl(var(--muted-foreground)); text-transform: uppercase; letter-spacing: 0.1em;">
+                  <div class="text-red-600 font-bold text-xl">APOTHEKEN</div>
+                  <div class="text-red-600 font-bold text-xl">Umschau</div>
+                  <div class="text-xs text-muted-foreground uppercase tracking-wide">
                     UNABHÄNGIGE GESUNDHEITSINFORMATION
                   </div>
                 </div>
               </div>
             </div>
             
-            <div style="display: flex; align-items: center; gap: 16px;">
-              <div style="position: relative;">
+            <div class="flex items-center gap-4">
+              <div class="relative">
                 <input 
                   type="text" 
                   placeholder="Suchbegriff oder Frage an KI eingeben"
-                  style="width: 320px; padding: 12px 16px; border: 1px solid hsl(var(--border)); border-radius: 8px; background-color: hsl(var(--background)); font-size: 0.875rem; outline: none;"
+                  class="w-80 px-4 py-3 border border-border rounded-lg bg-background text-sm focus:outline-none focus:ring-2 focus:ring-primary/20"
                 />
               </div>
             </div>
           </div>
           
           <!-- Navigation -->
-          <nav style="border-top: 1px solid hsl(var(--border)); background-color: #f9fafb;">
-            <div style="padding: 0 16px;">
-              <ul style="display: flex; align-items: center; font-size: 0.875rem; font-weight: 500; margin: 0; padding: 0; list-style: none;">
-                <li style="padding: 16px; color: hsl(var(--muted-foreground)); cursor: pointer; text-transform: uppercase; letter-spacing: 0.05em;">HOME</li>
-                <li style="padding: 16px; color: hsl(var(--muted-foreground)); cursor: pointer; text-transform: uppercase; letter-spacing: 0.05em;">KRANKHEITEN & SYMPTOME</li>
-                <li style="padding: 16px; color: hsl(var(--muted-foreground)); cursor: pointer; text-transform: uppercase; letter-spacing: 0.05em;">MEDIKAMENTE</li>
-                <li style="padding: 16px; color: hsl(var(--muted-foreground)); cursor: pointer; text-transform: uppercase; letter-spacing: 0.05em;">THERAPIE</li>
-                <li style="padding: 16px; color: hsl(var(--muted-foreground)); cursor: pointer; text-transform: uppercase; letter-spacing: 0.05em;">DIAGNOSE</li>
-                <li style="padding: 16px; color: hsl(var(--muted-foreground)); cursor: pointer; text-transform: uppercase; letter-spacing: 0.05em;">FAMILIE</li>
-                <li style="padding: 16px; color: hsl(var(--muted-foreground)); cursor: pointer; text-transform: uppercase; letter-spacing: 0.05em;">PFLEGE</li>
-                <li style="padding: 16px; color: hsl(var(--muted-foreground)); cursor: pointer; text-transform: uppercase; letter-spacing: 0.05em;">GESUND LEBEN</li>
+          <nav class="border-t border-border bg-gray-50">
+            <div class="px-4">
+              <ul class="flex items-center text-sm font-medium">
+                <li class="py-4 px-4 text-muted-foreground hover:text-primary cursor-pointer uppercase tracking-wide">HOME</li>
+                <li class="py-4 px-4 text-muted-foreground hover:text-primary cursor-pointer uppercase tracking-wide">KRANKHEITEN & SYMPTOME</li>
+                <li class="py-4 px-4 text-muted-foreground hover:text-primary cursor-pointer uppercase tracking-wide">MEDIKAMENTE</li>
+                <li class="py-4 px-4 text-muted-foreground hover:text-primary cursor-pointer uppercase tracking-wide">THERAPIE</li>
+                <li class="py-4 px-4 text-muted-foreground hover:text-primary cursor-pointer uppercase tracking-wide">DIAGNOSE</li>
+                <li class="py-4 px-4 text-muted-foreground hover:text-primary cursor-pointer uppercase tracking-wide">FAMILIE</li>
+                <li class="py-4 px-4 text-muted-foreground hover:text-primary cursor-pointer uppercase tracking-wide">PFLEGE</li>
+                <li class="py-4 px-4 text-muted-foreground hover:text-primary cursor-pointer uppercase tracking-wide">GESUND LEBEN</li>
               </ul>
             </div>
           </nav>
           
           <!-- Breadcrumbs -->
-          <div style="padding: 12px 16px; background-color: hsl(var(--background)); border-bottom: 1px solid hsl(var(--border));">
-            <div style="display: flex; align-items: center; gap: 8px; font-size: 0.875rem; color: hsl(var(--primary));">
-              <span style="cursor: pointer;">Home</span>
-              <span style="color: hsl(var(--muted-foreground));">›</span>
-              <span style="cursor: pointer;">Krankheiten & Symptome</span>
-              <span style="color: hsl(var(--muted-foreground));">›</span>
-              <span style="color: hsl(var(--muted-foreground));">Adipositas</span>
+          <div class="px-4 py-3 bg-background border-b border-border">
+            <div class="flex items-center gap-2 text-sm text-primary">
+              <span class="hover:underline cursor-pointer">Home</span>
+              <span class="text-muted-foreground">›</span>
+              <span class="hover:underline cursor-pointer">Krankheiten & Symptome</span>
+              <span class="text-muted-foreground">›</span>
+              <span class="text-muted-foreground">Adipositas</span>
             </div>
           </div>
         </div>
