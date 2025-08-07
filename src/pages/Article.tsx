@@ -5,10 +5,8 @@ import { Label } from "@/components/ui/label";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Timer from "@/components/Timer";
-import hansImage from "@/assets/commenter-hans.jpg";
-import monikaImage from "@/assets/commenter-monika.jpg";
-import klausImage from "@/assets/commenter-klaus.jpg";
-import sabineImage from "@/assets/commenter-sabine.jpg";
+import Testimonial from "@/components/Testimonial";
+import { testimonials } from "@/data/content";
 import { useState, useEffect } from "react";
 
 const Article = () => {
@@ -238,62 +236,17 @@ const Article = () => {
           <div className="max-w-4xl mx-auto">
             <h3 className="text-xl font-bold text-foreground mb-6">Leser-Kommentare</h3>
             
-            <div className="space-y-6">
-              <div className="border-b border-border pb-6">
-                <div className="flex items-start gap-3">
-                  <img src={hansImage} alt="Peter M." className="w-10 h-10 rounded-full object-cover" />
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="font-semibold text-foreground">Peter M. (71), Nürnberg</span>
-                    </div>
-                    <p className="text-foreground">
-                      „Ich konnte meine Frau nicht mal mehr umarmen – heute gehen wir wieder spazieren.“
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="border-b border-border pb-6">
-                <div className="flex items-start gap-3">
-                  <img src={monikaImage} alt="Jürgen S." className="w-10 h-10 rounded-full object-cover" />
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="font-semibold text-foreground">Jürgen S. (66), Hamburg</span>
-                    </div>
-                    <p className="text-foreground">
-                      „Schmerz war mein Alltag. Heute ist Ruhe mein neuer Zustand.“
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="border-b border-border pb-6">
-                <div className="flex items-start gap-3">
-                  <img src={klausImage} alt="Andreas W." className="w-10 h-10 rounded-full object-cover" />
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="font-semibold text-foreground">Andreas W. (59), Berlin</span>
-                    </div>
-                    <p className="text-foreground">
-                      „Boris hatte recht. Dieses Gel ist kein Werbegag – es wirkt.“
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="border-b border-border pb-6">
-                <div className="flex items-start gap-3">
-                  <img src={sabineImage} alt="Helga R." className="w-10 h-10 rounded-full object-cover" />
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="font-semibold text-foreground">Helga R. (68), Bremen</span>
-                    </div>
-                    <p className="text-foreground">
-                      „Ich konnte 5 Jahre lang keine Nacht durchschlafen – meine Hüfte war wie Feuer. Ich habe Gehhilfe benutzt. Nach 2 Wochen mit Flexosamine – ich brauche sie nicht mehr. Ich laufe wieder!“
-                    </p>
-                  </div>
-                </div>
-              </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {testimonials.map((testimonial, index) => (
+                <Testimonial
+                  key={index}
+                  content={testimonial.content}
+                  author={testimonial.author}
+                  role={testimonial.role}
+                  rating={testimonial.rating}
+                  avatar={testimonial.avatar}
+                />
+              ))}
             </div>
           </div>
         </div>
