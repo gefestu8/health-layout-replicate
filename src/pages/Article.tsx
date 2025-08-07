@@ -35,11 +35,6 @@ const Article = () => {
           <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-6 leading-tight">„Ich war gelähmt vor Schmerz. Jetzt bewege ich mich wieder wie früher.“</h1>
           <p className="text-xl text-muted-foreground">Erfahrungsbericht von Boris Becker – Ex-Tennisstar spricht offen über seine Gelenkhölle</p>
           
-          <div className="text-sm text-muted-foreground mb-4 mt-6">
-            Von <span className="text-primary font-medium">Dr. Maria Schmidt</span> (Rheumatolgin) • 
-            Medizinische Prüfung: <span className="text-primary font-medium">Prof. Dr. Hans Weber</span> • 
-            07.08.2025
-          </div>
         </div>
       </section>
 
@@ -252,7 +247,7 @@ const Article = () => {
                       <span className="font-semibold text-foreground">Peter M. (71), Nürnberg</span>
                     </div>
                     <p className="text-foreground">
-                      Meine Knie waren zerstört. Treppensteigen? Unmöglich. Ich war kurz davor, mich operieren zu lassen. Jetzt nehme ich Flexosamine – und gehe jeden Tag 30 Minuten spazieren. Ohne Schmerzen
+                      „Ich konnte meine Frau nicht mal mehr umarmen – heute gehen wir wieder spazieren.“
                     </p>
                   </div>
                 </div>
@@ -263,10 +258,10 @@ const Article = () => {
                   <img src={monikaImage} alt="Jürgen S." className="w-10 h-10 rounded-full object-cover" />
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
-                      <span className="font-semibold text-foreground">Matthias K. (66), Hamburg</span>
+                      <span className="font-semibold text-foreground">Jürgen S. (66), Hamburg</span>
                     </div>
                     <p className="text-foreground">
-                      Ich brauchte morgens 40 Minuten, um mich zu bewegen. Alles war steif und geschwollen. Jetzt bin ich in 5 Minuten im Garten – ohne Schmerzen, ohne Medikamente
+                      „Schmerz war mein Alltag. Heute ist Ruhe mein neuer Zustand.“
                     </p>
                   </div>
                 </div>
@@ -280,7 +275,7 @@ const Article = () => {
                       <span className="font-semibold text-foreground">Andreas W. (59), Berlin</span>
                     </div>
                     <p className="text-foreground">
-                      Ich hatte chronischen Rückenschmerz seit über 10 Jahren. Alles ausprobiert – nichts half. Flexosamine hat in 4 Tagen mehr gebracht als 10 Jahre Therapie
+                      „Boris hatte recht. Dieses Gel ist kein Werbegag – es wirkt.“
                     </p>
                   </div>
                 </div>
@@ -291,94 +286,10 @@ const Article = () => {
                   <img src={sabineImage} alt="Helga R." className="w-10 h-10 rounded-full object-cover" />
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
-                      <span className="font-semibold text-foreground">Ingrid B. (68), Bremen</span>
+                      <span className="font-semibold text-foreground">Helga R. (68), Bremen</span>
                     </div>
                     <p className="text-foreground">
-                      Nach 3 Jahren ständiger Schmerzen in den Fingern konnte ich meine Stricknadeln nicht mehr halten. Ich hatte aufgegeben. Jetzt stricke ich wieder – täglich. Flexosamine hat mir mein Leben zurückgegeben
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="border-b border-border pb-6">
-                <div className="flex items-start gap-3">
-                  <img src={hansImage} alt="Frank T." className="w-10 h-10 rounded-full object-cover" />
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="font-semibold text-foreground">Frank T. (62), Hannover</span>
-                    </div>
-                    <p className="text-foreground">
-                      „Meine Knie waren zerstört. Treppensteigen? Unmöglich. Ich war kurz davor, mich operieren zu lassen. Jetzt nehme ich Flexosamine – und gehe jeden Tag 30 Minuten spazieren. Ohne Schmerzen.“
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="border-b border-border pb-6">
-                <div className="flex items-start gap-3">
-                  <img src={monikaImage} alt="Ingrid B." className="w-10 h-10 rounded-full object-cover" />
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="font-semibold text-foreground">Ingrid B. (73), München</span>
-                    </div>
-                    <p className="text-foreground">
-                      „Nach 3 Jahren ständiger Schmerzen in den Fingern konnte ich meine Stricknadeln nicht mehr halten. Ich hatte aufgegeben. Jetzt stricke ich wieder – täglich. Flexosamine hat mir mein Leben zurückgegeben.“
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="border-b border-border pb-6">
-                <div className="flex items-start gap-3">
-                  <img src={klausImage} alt="Matthias K." className="w-10 h-10 rounded-full object-cover" />
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="font-semibold text-foreground">Matthias K. (58), Leipzig</span>
-                    </div>
-                    <p className="text-foreground">
-                      „Ich hatte chronischen Rückenschmerz seit über 10 Jahren. Alles ausprobiert – nichts half. Flexosamine hat in 4 Tagen mehr gebracht als 10 Jahre Therapie.“
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="border-b border-border pb-6">
-                <div className="flex items-start gap-3">
-                  <img src={sabineImage} alt="Renate P." className="w-10 h-10 rounded-full object-cover" />
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="font-semibold text-foreground">Renate P. (65), Mainz</span>
-                    </div>
-                    <p className="text-foreground">
-                      „Ich brauchte morgens 40 Minuten, um mich zu bewegen. Alles war steif und geschwollen. Jetzt bin ich in 5 Minuten im Garten – ohne Schmerzen, ohne Medikamente.“
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="border-b border-border pb-6">
-                <div className="flex items-start gap-3">
-                  <img src={hansImage} alt="Kurt H." className="w-10 h-10 rounded-full object-cover" />
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="font-semibold text-foreground">Kurt H. (74), Stuttgart</span>
-                    </div>
-                    <p className="text-foreground">
-                      „Ich habe 20 Jahre auf dem Bau gearbeitet. Meine Gelenke waren hin. Ich dachte, mein Körper sei am Ende. Flexosamine war mein letzter Versuch – und es war der richtige. Keine Schmerzen mehr.“
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="border-b border-border pb-6">
-                <div className="flex items-start gap-3">
-                  <img src={monikaImage} alt="Beate S." className="w-10 h-10 rounded-full object-cover" />
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="font-semibold text-foreground">Beate S. (60), Düsseldorf</span>
-                    </div>
-                    <p className="text-foreground">
-                      „Ich konnte meine Enkel nicht mehr hochheben – meine Arme und Schultern waren wie blockiert. Nach 10 Tagen Flexosamine war ich wieder die Oma, die ich sein wollte.“
+                      „Ich konnte 5 Jahre lang keine Nacht durchschlafen – meine Hüfte war wie Feuer. Ich habe Gehhilfe benutzt. Nach 2 Wochen mit Flexosamine – ich brauche sie nicht mehr. Ich laufe wieder!“
                     </p>
                   </div>
                 </div>
