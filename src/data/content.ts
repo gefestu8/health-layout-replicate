@@ -46,7 +46,7 @@ export const testimonials = [
     author: "Peter M. (71)",
     role: "Nürnberg",
     rating: 5,
-    avatar: "/src/assets/commenter-hans.jpg"
+    avatar: "/lovable-uploads/efeb78ca-317c-456d-b1f8-543002fb5fdb.png"
   },
   {
     content: "Schmerz war mein Alltag. Heute ist Ruhe mein neuer Zustand.",
@@ -67,7 +67,7 @@ export const testimonials = [
     author: "Helga R. (68)",
     role: "Bremen",
     rating: 5,
-    avatar: "/src/assets/commenter-sabine.jpg"
+    avatar: "/lovable-uploads/3dcef02b-c170-42d6-9772-9b94ac180313.png"
   },
   {
     content: "Die Behandlung war sehr effektiv. Meine chronischen Schmerzen sind fast verschwunden.",
@@ -81,14 +81,14 @@ export const testimonials = [
     author: "Wolfgang K. (57)",
     role: "Köln",
     rating: 5,
-    avatar: "/src/assets/commenter-monika.jpg"
+    avatar: "/lovable-uploads/photo_2025-08-06_13-33-44.jpg"
   },
   {
     content: "Als Arzt kann ich diese Behandlungsmethode nur empfehlen. Sehr gute Resultate bei meinen Patienten.",
     author: "Dr. Dieter R. (54)",
     role: "Fachartz, Dresden",
     rating: 5,
-    avatar: "/src/assets/commenter-klaus.jpg"
+    avatar: "/lovable-uploads/DeWatermark.ai_1754506600916.jpeg"
   },
   {
     content: "Nach Jahren der Beschwerden endlich eine Lösung gefunden. Bin sehr zufrieden mit dem Ergebnis.",
