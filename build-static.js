@@ -536,6 +536,62 @@ function generateArticleHTML() {
                   </div>
                 </div>
               </div>
+
+              <div class="border-b border-border pb-6">
+                <div class="flex items-start gap-3">
+                  <img src="./lovable-uploads/58ff73a0-09ae-491b-8520-2115b6c30fbe.png" alt="Friedrich Sch." class="w-10 h-10 rounded-full object-cover" />
+                  <div class="flex-1">
+                    <div class="flex items-center gap-2 mb-2">
+                      <span class="font-semibold text-foreground">Friedrich Sch. (62), München</span>
+                    </div>
+                    <p class="text-foreground">
+                      „Die Behandlung war sehr effektiv. Meine chronischen Schmerzen sind fast verschwunden."
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="border-b border-border pb-6">
+                <div class="flex items-start gap-3">
+                  <img src="./lovable-uploads/f4a8c36b-d907-4686-861c-85b316f09b50.png" alt="Wolfgang K." class="w-10 h-10 rounded-full object-cover" />
+                  <div class="flex-1">
+                    <div class="flex items-center gap-2 mb-2">
+                      <span class="font-semibold text-foreground">Wolfgang K. (57), Köln</span>
+                    </div>
+                    <p class="text-foreground">
+                      „Endlich kann ich wieder normal schlafen und arbeiten. Das Medikament hat mein Leben verändert."
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="border-b border-border pb-6">
+                <div class="flex items-start gap-3">
+                  <img src="./img/commenter-klaus.jpg" alt="Dr. Dieter R." class="w-10 h-10 rounded-full object-cover" />
+                  <div class="flex-1">
+                    <div class="flex items-center gap-2 mb-2">
+                      <span class="font-semibold text-foreground">Dr. Dieter R. (54), Facharzt, Dresden</span>
+                    </div>
+                    <p class="text-foreground">
+                      „Als Arzt kann ich diese Behandlungsmethode nur empfehlen. Sehr gute Resultate bei meinen Patienten."
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="border-b border-border pb-6">
+                <div class="flex items-start gap-3">
+                  <img src="./lovable-uploads/572c52ff-cef4-4902-bcc8-557c192f468a.png" alt="Rainer B." class="w-10 h-10 rounded-full object-cover" />
+                  <div class="flex-1">
+                    <div class="flex items-center gap-2 mb-2">
+                      <span class="font-semibold text-foreground">Rainer B. (63), Stuttgart</span>
+                    </div>
+                    <p class="text-foreground">
+                      „Nach Jahren der Beschwerden endlich eine Lösung gefunden. Bin sehr zufrieden mit dem Ergebnis."
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
