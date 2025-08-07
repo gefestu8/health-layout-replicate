@@ -31,7 +31,8 @@ const Article = () => {
             </span>
           </div>
           
-          <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-6 leading-tight">Ich war gelähmt vor Schmerz. Jetzt bewege ich mich wieder wie früher</h1>
+          <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-6 leading-tight">Ich war gelähmt vor Schmerz. Jetzt bewege ich mich wieder wie früher
+Erfahrungsbericht von Boris Becker – Ex-Tennisstar spricht offen über seine Gelenkhölle</h1>
           
           <div className="text-sm text-muted-foreground mb-4">
             Von <span className="text-primary font-medium">Dr. Maria Schmidt</span> (Rheumatolgin) • 
@@ -50,15 +51,14 @@ const Article = () => {
             </div>
             
             <p className="text-lg leading-relaxed mb-6">
-              <strong>Millionen Deutsche leiden unter Gelenkschmerzen.</strong> Besonders Menschen über 50 
+              <strong>Erfahrungsbericht von Boris Becker – Ex-Tennisstar spricht offen über seine Gelenkhölle</strong> Besonders Menschen über 50 
               kennen das Problem: Morgens sind die Finger steif, die Knie schmerzen beim Treppensteigen, 
               der Rücken macht sich nach langem Sitzen bemerkbar. Doch was steckt dahinter und welche 
               Behandlungsmöglichkeiten gibt es wirklich?
             </p>
             
-            <h2 className="text-2xl font-bold text-foreground mb-4 mt-8">
-              Die häufigsten Ursachen von Gelenkbeschwerden
-            </h2>
+            <h2 className="text-2xl font-bold text-foreground mb-4 mt-8">Persönlicher Einstieg
+Ich hatte alles. Doch ich verlor das Wichtigste: meine Beweglichkeit.</h2>
             
             <p className="text-lg leading-relaxed mb-6">
               <strong>Arthrose</strong> ist die häufigste Gelenkerkrankung überhaupt. Dabei nutzt sich der 
