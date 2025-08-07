@@ -61,6 +61,41 @@ export const testimonials = [
     role: "Медсестра", 
     rating: 5,
     avatar: "/src/assets/commenter-monika.jpg"
+  },
+  {
+    content: "текст",
+    author: "Фридрих Ш.",
+    role: "Врач",
+    rating: 5,
+    avatar: "/lovable-uploads/58ff73a0-09ae-491b-8520-2115b6c30fbe.png"
+  },
+  {
+    content: "текст",
+    author: "Вольфганг К.",
+    role: "Пациент",
+    rating: 5,
+    avatar: "/lovable-uploads/f4a8c36b-d907-4686-861c-85b316f09b50.png"
+  },
+  {
+    content: "текст",
+    author: "Дитер Р.",
+    role: "Фармацевт",
+    rating: 5,
+    avatar: "/lovable-uploads/b45bc9e9-7bb5-4bb0-87f6-caca8b6bd274.png"
+  },
+  {
+    content: "текст",
+    author: "Юрген М.",
+    role: "Терапевт",
+    rating: 5,
+    avatar: "/lovable-uploads/3dcef02b-c170-42d6-9772-9b94ac180313.png"
+  },
+  {
+    content: "текст",
+    author: "Райнер Б.",
+    role: "Пациент",
+    rating: 5,
+    avatar: "/lovable-uploads/572c52ff-cef4-4902-bcc8-557c192f468a.png"
   }
 ];
 
