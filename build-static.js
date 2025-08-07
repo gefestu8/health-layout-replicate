@@ -475,120 +475,208 @@ function generateArticleHTML() {
       </section>
 
       <!-- Comments Section -->
-      <section class="py-8 bg-background">
-        <div class="container mx-auto px-4">
-          <div class="max-w-4xl mx-auto">
-            <h3 class="text-xl font-bold text-foreground mb-6">Leser-Kommentare</h3>
+      <section style="padding: 32px 0; background-color: hsl(var(--background));">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 16px;">
+          <div style="max-width: 896px; margin: 0 auto;">
+            <h3 style="font-size: 1.25rem; font-weight: 700; color: hsl(var(--foreground)); margin-bottom: 24px;">Leser-Kommentare</h3>
             
-            <div class="space-y-6">
-              <div class="border-b border-border pb-6">
-                <div class="flex items-start gap-3">
-                  <img src="./img/commenter-hans.jpg" alt="Peter M." class="w-10 h-10 rounded-full object-cover" />
-                  <div class="flex-1">
-                    <div class="flex items-center gap-2 mb-2">
-                      <span class="font-semibold text-foreground">Peter M. (71), Nürnberg</span>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+              <!-- Testimonial 1 -->
+              <div style="background-color: hsl(var(--card)); border: 1px solid hsl(var(--border)); border-radius: 8px; height: fit-content;">
+                <div style="padding: 24px;">
+                  <div style="display: flex; margin-bottom: 16px;">
+                    <span style="color: #fbbf24; font-size: 1.125rem;">★</span>
+                    <span style="color: #fbbf24; font-size: 1.125rem;">★</span>
+                    <span style="color: #fbbf24; font-size: 1.125rem;">★</span>
+                    <span style="color: #fbbf24; font-size: 1.125rem;">★</span>
+                    <span style="color: #fbbf24; font-size: 1.125rem;">★</span>
+                  </div>
+                  <blockquote style="color: hsl(var(--foreground)); margin-bottom: 16px; font-style: italic; line-height: 1.6;">
+                    "Ich konnte meine Frau nicht mal mehr umarmen – heute gehen wir wieder spazieren."
+                  </blockquote>
+                  <div style="display: flex; align-items: center; gap: 12px; border-left: 4px solid hsl(var(--primary)); padding-left: 16px;">
+                    <div style="width: 48px; height: 48px; border-radius: 50%; overflow: hidden;">
+                      <img src="./lovable-uploads/efeb78ca-317c-456d-b1f8-543002fb5fdb.png" alt="Peter M." style="width: 100%; height: 100%; object-fit: cover;" />
                     </div>
-                    <p class="text-foreground">
-                      „Ich konnte meine Frau nicht mal mehr umarmen – heute gehen wir wieder spazieren."
-                    </p>
+                    <div>
+                      <cite style="font-weight: 600; color: hsl(var(--foreground)); font-style: normal;">Peter M. (71)</cite>
+                      <p style="color: hsl(var(--muted-foreground)); font-size: 0.875rem; margin: 0;">Nürnberg</p>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div class="border-b border-border pb-6">
-                <div class="flex items-start gap-3">
-                  <img src="./img/commenter-monika.jpg" alt="Jürgen S." class="w-10 h-10 rounded-full object-cover" />
-                  <div class="flex-1">
-                    <div class="flex items-center gap-2 mb-2">
-                      <span class="font-semibold text-foreground">Jürgen S. (66), Hamburg</span>
+              <!-- Testimonial 2 -->
+              <div style="background-color: hsl(var(--card)); border: 1px solid hsl(var(--border)); border-radius: 8px; height: fit-content;">
+                <div style="padding: 24px;">
+                  <div style="display: flex; margin-bottom: 16px;">
+                    <span style="color: #fbbf24; font-size: 1.125rem;">★</span>
+                    <span style="color: #fbbf24; font-size: 1.125rem;">★</span>
+                    <span style="color: #fbbf24; font-size: 1.125rem;">★</span>
+                    <span style="color: #fbbf24; font-size: 1.125rem;">★</span>
+                    <span style="color: #fbbf24; font-size: 1.125rem;">★</span>
+                  </div>
+                  <blockquote style="color: hsl(var(--foreground)); margin-bottom: 16px; font-style: italic; line-height: 1.6;">
+                    "Schmerz war mein Alltag. Heute ist Ruhe mein neuer Zustand."
+                  </blockquote>
+                  <div style="display: flex; align-items: center; gap: 12px; border-left: 4px solid hsl(var(--primary)); padding-left: 16px;">
+                    <div style="width: 48px; height: 48px; border-radius: 50%; overflow: hidden;">
+                      <img src="./lovable-uploads/f4a8c36b-d907-4686-861c-85b316f09b50.png" alt="Jürgen S." style="width: 100%; height: 100%; object-fit: cover;" />
                     </div>
-                    <p class="text-foreground">
-                      „Schmerz war mein Alltag. Heute ist Ruhe mein neuer Zustand."
-                    </p>
+                    <div>
+                      <cite style="font-weight: 600; color: hsl(var(--foreground)); font-style: normal;">Jürgen S. (66)</cite>
+                      <p style="color: hsl(var(--muted-foreground)); font-size: 0.875rem; margin: 0;">Hamburg</p>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div class="border-b border-border pb-6">
-                <div class="flex items-start gap-3">
-                  <img src="./img/commenter-klaus.jpg" alt="Andreas W." class="w-10 h-10 rounded-full object-cover" />
-                  <div class="flex-1">
-                    <div class="flex items-center gap-2 mb-2">
-                      <span class="font-semibold text-foreground">Andreas W. (59), Berlin</span>
+              <!-- Testimonial 3 -->
+              <div style="background-color: hsl(var(--card)); border: 1px solid hsl(var(--border)); border-radius: 8px; height: fit-content;">
+                <div style="padding: 24px;">
+                  <div style="display: flex; margin-bottom: 16px;">
+                    <span style="color: #fbbf24; font-size: 1.125rem;">★</span>
+                    <span style="color: #fbbf24; font-size: 1.125rem;">★</span>
+                    <span style="color: #fbbf24; font-size: 1.125rem;">★</span>
+                    <span style="color: #fbbf24; font-size: 1.125rem;">★</span>
+                    <span style="color: #fbbf24; font-size: 1.125rem;">★</span>
+                  </div>
+                  <blockquote style="color: hsl(var(--foreground)); margin-bottom: 16px; font-style: italic; line-height: 1.6;">
+                    "Boris hatte recht. Dieses Gel ist kein Werbegag – es wirkt."
+                  </blockquote>
+                  <div style="display: flex; align-items: center; gap: 12px; border-left: 4px solid hsl(var(--primary)); padding-left: 16px;">
+                    <div style="width: 48px; height: 48px; border-radius: 50%; overflow: hidden;">
+                      <img src="./lovable-uploads/b45bc9e9-7bb5-4bb0-87f6-caca8b6bd274.png" alt="Andreas W." style="width: 100%; height: 100%; object-fit: cover;" />
                     </div>
-                    <p class="text-foreground">
-                      „Boris hatte recht. Dieses Gel ist kein Werbegag – es wirkt."
-                    </p>
+                    <div>
+                      <cite style="font-weight: 600; color: hsl(var(--foreground)); font-style: normal;">Andreas W. (59)</cite>
+                      <p style="color: hsl(var(--muted-foreground)); font-size: 0.875rem; margin: 0;">Berlin</p>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div class="border-b border-border pb-6">
-                <div class="flex items-start gap-3">
-                  <img src="./img/commenter-sabine.jpg" alt="Helga R." class="w-10 h-10 rounded-full object-cover" />
-                  <div class="flex-1">
-                    <div class="flex items-center gap-2 mb-2">
-                      <span class="font-semibold text-foreground">Helga R. (68), Bremen</span>
+              <!-- Testimonial 4 -->
+              <div style="background-color: hsl(var(--card)); border: 1px solid hsl(var(--border)); border-radius: 8px; height: fit-content;">
+                <div style="padding: 24px;">
+                  <div style="display: flex; margin-bottom: 16px;">
+                    <span style="color: #fbbf24; font-size: 1.125rem;">★</span>
+                    <span style="color: #fbbf24; font-size: 1.125rem;">★</span>
+                    <span style="color: #fbbf24; font-size: 1.125rem;">★</span>
+                    <span style="color: #fbbf24; font-size: 1.125rem;">★</span>
+                    <span style="color: #fbbf24; font-size: 1.125rem;">★</span>
+                  </div>
+                  <blockquote style="color: hsl(var(--foreground)); margin-bottom: 16px; font-style: italic; line-height: 1.6;">
+                    "Ich konnte 5 Jahre lang keine Nacht durchschlafen – meine Hüfte war wie Feuer. Ich habe Gehhilfe benutzt. Nach 2 Wochen mit Flexosamine – ich brauche sie nicht mehr. Ich laufe wieder!"
+                  </blockquote>
+                  <div style="display: flex; align-items: center; gap: 12px; border-left: 4px solid hsl(var(--primary)); padding-left: 16px;">
+                    <div style="width: 48px; height: 48px; border-radius: 50%; overflow: hidden;">
+                      <img src="./lovable-uploads/3dcef02b-c170-42d6-9772-9b94ac180313.png" alt="Helga R." style="width: 100%; height: 100%; object-fit: cover;" />
                     </div>
-                    <p class="text-foreground">
-                      „Ich konnte 5 Jahre lang keine Nacht durchschlafen – meine Hüfte war wie Feuer. Ich habe Gehhilfe benutzt. Nach 2 Wochen mit Flexosamine – ich brauche sie nicht mehr. Ich laufe wieder!"
-                    </p>
+                    <div>
+                      <cite style="font-weight: 600; color: hsl(var(--foreground)); font-style: normal;">Helga R. (68)</cite>
+                      <p style="color: hsl(var(--muted-foreground)); font-size: 0.875rem; margin: 0;">Bremen</p>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div class="border-b border-border pb-6">
-                <div class="flex items-start gap-3">
-                  <img src="./lovable-uploads/58ff73a0-09ae-491b-8520-2115b6c30fbe.png" alt="Friedrich Sch." class="w-10 h-10 rounded-full object-cover" />
-                  <div class="flex-1">
-                    <div class="flex items-center gap-2 mb-2">
-                      <span class="font-semibold text-foreground">Friedrich Sch. (62), München</span>
+              <!-- Testimonial 5 -->
+              <div style="background-color: hsl(var(--card)); border: 1px solid hsl(var(--border)); border-radius: 8px; height: fit-content;">
+                <div style="padding: 24px;">
+                  <div style="display: flex; margin-bottom: 16px;">
+                    <span style="color: #fbbf24; font-size: 1.125rem;">★</span>
+                    <span style="color: #fbbf24; font-size: 1.125rem;">★</span>
+                    <span style="color: #fbbf24; font-size: 1.125rem;">★</span>
+                    <span style="color: #fbbf24; font-size: 1.125rem;">★</span>
+                    <span style="color: #fbbf24; font-size: 1.125rem;">★</span>
+                  </div>
+                  <blockquote style="color: hsl(var(--foreground)); margin-bottom: 16px; font-style: italic; line-height: 1.6;">
+                    "Die Behandlung war sehr effektiv. Meine chronischen Schmerzen sind fast verschwunden."
+                  </blockquote>
+                  <div style="display: flex; align-items: center; gap: 12px; border-left: 4px solid hsl(var(--primary)); padding-left: 16px;">
+                    <div style="width: 48px; height: 48px; border-radius: 50%; overflow: hidden;">
+                      <img src="./lovable-uploads/58ff73a0-09ae-491b-8520-2115b6c30fbe.png" alt="Friedrich Sch." style="width: 100%; height: 100%; object-fit: cover;" />
                     </div>
-                    <p class="text-foreground">
-                      „Die Behandlung war sehr effektiv. Meine chronischen Schmerzen sind fast verschwunden."
-                    </p>
+                    <div>
+                      <cite style="font-weight: 600; color: hsl(var(--foreground)); font-style: normal;">Friedrich Sch. (62)</cite>
+                      <p style="color: hsl(var(--muted-foreground)); font-size: 0.875rem; margin: 0;">München</p>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div class="border-b border-border pb-6">
-                <div class="flex items-start gap-3">
-                  <img src="./lovable-uploads/f4a8c36b-d907-4686-861c-85b316f09b50.png" alt="Wolfgang K." class="w-10 h-10 rounded-full object-cover" />
-                  <div class="flex-1">
-                    <div class="flex items-center gap-2 mb-2">
-                      <span class="font-semibold text-foreground">Wolfgang K. (57), Köln</span>
+              <!-- Testimonial 6 -->
+              <div style="background-color: hsl(var(--card)); border: 1px solid hsl(var(--border)); border-radius: 8px; height: fit-content;">
+                <div style="padding: 24px;">
+                  <div style="display: flex; margin-bottom: 16px;">
+                    <span style="color: #fbbf24; font-size: 1.125rem;">★</span>
+                    <span style="color: #fbbf24; font-size: 1.125rem;">★</span>
+                    <span style="color: #fbbf24; font-size: 1.125rem;">★</span>
+                    <span style="color: #fbbf24; font-size: 1.125rem;">★</span>
+                    <span style="color: #fbbf24; font-size: 1.125rem;">★</span>
+                  </div>
+                  <blockquote style="color: hsl(var(--foreground)); margin-bottom: 16px; font-style: italic; line-height: 1.6;">
+                    "Endlich kann ich wieder normal schlafen und arbeiten. Das Medikament hat mein Leben verändert."
+                  </blockquote>
+                  <div style="display: flex; align-items: center; gap: 12px; border-left: 4px solid hsl(var(--primary)); padding-left: 16px;">
+                    <div style="width: 48px; height: 48px; border-radius: 50%; overflow: hidden;">
+                      <img src="./lovable-uploads/photo_2025-08-06_13-33-44.jpg" alt="Wolfgang K." style="width: 100%; height: 100%; object-fit: cover;" />
                     </div>
-                    <p class="text-foreground">
-                      „Endlich kann ich wieder normal schlafen und arbeiten. Das Medikament hat mein Leben verändert."
-                    </p>
+                    <div>
+                      <cite style="font-weight: 600; color: hsl(var(--foreground)); font-style: normal;">Wolfgang K. (57)</cite>
+                      <p style="color: hsl(var(--muted-foreground)); font-size: 0.875rem; margin: 0;">Köln</p>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div class="border-b border-border pb-6">
-                <div class="flex items-start gap-3">
-                  <img src="./img/commenter-klaus.jpg" alt="Dr. Dieter R." class="w-10 h-10 rounded-full object-cover" />
-                  <div class="flex-1">
-                    <div class="flex items-center gap-2 mb-2">
-                      <span class="font-semibold text-foreground">Dr. Dieter R. (54), Facharzt, Dresden</span>
+              <!-- Testimonial 7 -->
+              <div style="background-color: hsl(var(--card)); border: 1px solid hsl(var(--border)); border-radius: 8px; height: fit-content;">
+                <div style="padding: 24px;">
+                  <div style="display: flex; margin-bottom: 16px;">
+                    <span style="color: #fbbf24; font-size: 1.125rem;">★</span>
+                    <span style="color: #fbbf24; font-size: 1.125rem;">★</span>
+                    <span style="color: #fbbf24; font-size: 1.125rem;">★</span>
+                    <span style="color: #fbbf24; font-size: 1.125rem;">★</span>
+                    <span style="color: #fbbf24; font-size: 1.125rem;">★</span>
+                  </div>
+                  <blockquote style="color: hsl(var(--foreground)); margin-bottom: 16px; font-style: italic; line-height: 1.6;">
+                    "Als Arzt kann ich diese Behandlungsmethode nur empfehlen. Sehr gute Resultate bei meinen Patienten."
+                  </blockquote>
+                  <div style="display: flex; align-items: center; gap: 12px; border-left: 4px solid hsl(var(--primary)); padding-left: 16px;">
+                    <div style="width: 48px; height: 48px; border-radius: 50%; overflow: hidden;">
+                      <img src="./lovable-uploads/DeWatermark.ai_1754506600916.jpeg" alt="Dr. Dieter R." style="width: 100%; height: 100%; object-fit: cover;" />
                     </div>
-                    <p class="text-foreground">
-                      „Als Arzt kann ich diese Behandlungsmethode nur empfehlen. Sehr gute Resultate bei meinen Patienten."
-                    </p>
+                    <div>
+                      <cite style="font-weight: 600; color: hsl(var(--foreground)); font-style: normal;">Dr. Dieter R. (54)</cite>
+                      <p style="color: hsl(var(--muted-foreground)); font-size: 0.875rem; margin: 0;">Facharzt, Dresden</p>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div class="border-b border-border pb-6">
-                <div class="flex items-start gap-3">
-                  <img src="./lovable-uploads/572c52ff-cef4-4902-bcc8-557c192f468a.png" alt="Rainer B." class="w-10 h-10 rounded-full object-cover" />
-                  <div class="flex-1">
-                    <div class="flex items-center gap-2 mb-2">
-                      <span class="font-semibold text-foreground">Rainer B. (63), Stuttgart</span>
+              <!-- Testimonial 8 -->
+              <div style="background-color: hsl(var(--card)); border: 1px solid hsl(var(--border)); border-radius: 8px; height: fit-content;">
+                <div style="padding: 24px;">
+                  <div style="display: flex; margin-bottom: 16px;">
+                    <span style="color: #fbbf24; font-size: 1.125rem;">★</span>
+                    <span style="color: #fbbf24; font-size: 1.125rem;">★</span>
+                    <span style="color: #fbbf24; font-size: 1.125rem;">★</span>
+                    <span style="color: #fbbf24; font-size: 1.125rem;">★</span>
+                    <span style="color: #fbbf24; font-size: 1.125rem;">★</span>
+                  </div>
+                  <blockquote style="color: hsl(var(--foreground)); margin-bottom: 16px; font-style: italic; line-height: 1.6;">
+                    "Nach Jahren der Beschwerden endlich eine Lösung gefunden. Bin sehr zufrieden mit dem Ergebnis."
+                  </blockquote>
+                  <div style="display: flex; align-items: center; gap: 12px; border-left: 4px solid hsl(var(--primary)); padding-left: 16px;">
+                    <div style="width: 48px; height: 48px; border-radius: 50%; overflow: hidden;">
+                      <img src="./lovable-uploads/572c52ff-cef4-4902-bcc8-557c192f468a.png" alt="Rainer B." style="width: 100%; height: 100%; object-fit: cover;" />
                     </div>
-                    <p class="text-foreground">
-                      „Nach Jahren der Beschwerden endlich eine Lösung gefunden. Bin sehr zufrieden mit dem Ergebnis."
-                    </p>
+                    <div>
+                      <cite style="font-weight: 600; color: hsl(var(--foreground)); font-style: normal;">Rainer B. (63)</cite>
+                      <p style="color: hsl(var(--muted-foreground)); font-size: 0.875rem; margin: 0;">Stuttgart</p>
+                    </div>
                   </div>
                 </div>
               </div>
