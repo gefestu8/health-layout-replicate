@@ -302,8 +302,7 @@ const Article = () => {
 
               <div className="border-b border-border pb-6">
                 <div className="flex items-start gap-3">
-                  {/* You can add a placeholder image here */}
-                  <div className="w-10 h-10 rounded-full bg-muted"></div>
+                  <img src={hansImage} alt="Frank T." className="w-10 h-10 rounded-full object-cover" />
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
                       <span className="font-semibold text-foreground">Frank T. (62), Hannover</span>
@@ -317,8 +316,7 @@ const Article = () => {
 
               <div className="border-b border-border pb-6">
                 <div className="flex items-start gap-3">
-                  {/* You can add a placeholder image here */}
-                  <div className="w-10 h-10 rounded-full bg-muted"></div>
+                  <img src={monikaImage} alt="Ingrid B." className="w-10 h-10 rounded-full object-cover" />
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
                       <span className="font-semibold text-foreground">Ingrid B. (73), München</span>
@@ -332,8 +330,7 @@ const Article = () => {
 
               <div className="border-b border-border pb-6">
                 <div className="flex items-start gap-3">
-                  {/* You can add a placeholder image here */}
-                  <div className="w-10 h-10 rounded-full bg-muted"></div>
+                  <img src={klausImage} alt="Matthias K." className="w-10 h-10 rounded-full object-cover" />
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
                       <span className="font-semibold text-foreground">Matthias K. (58), Leipzig</span>
@@ -347,8 +344,7 @@ const Article = () => {
 
               <div className="border-b border-border pb-6">
                 <div className="flex items-start gap-3">
-                  {/* You can add a placeholder image here */}
-                  <div className="w-10 h-10 rounded-full bg-muted"></div>
+                  <img src={sabineImage} alt="Renate P." className="w-10 h-10 rounded-full object-cover" />
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
                       <span className="font-semibold text-foreground">Renate P. (65), Mainz</span>
@@ -362,8 +358,7 @@ const Article = () => {
 
               <div className="border-b border-border pb-6">
                 <div className="flex items-start gap-3">
-                  {/* You can add a placeholder image here */}
-                  <div className="w-10 h-10 rounded-full bg-muted"></div>
+                  <img src={hansImage} alt="Kurt H." className="w-10 h-10 rounded-full object-cover" />
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
                       <span className="font-semibold text-foreground">Kurt H. (74), Stuttgart</span>
@@ -377,8 +372,7 @@ const Article = () => {
 
               <div className="border-b border-border pb-6">
                 <div className="flex items-start gap-3">
-                  {/* You can add a placeholder image here */}
-                  <div className="w-10 h-10 rounded-full bg-muted"></div>
+                  <img src={monikaImage} alt="Beate S." className="w-10 h-10 rounded-full object-cover" />
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
                       <span className="font-semibold text-foreground">Beate S. (60), Düsseldorf</span>
