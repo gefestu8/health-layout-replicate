@@ -10,20 +10,16 @@ import monikaImage from "@/assets/commenter-monika.jpg";
 import klausImage from "@/assets/commenter-klaus.jpg";
 import sabineImage from "@/assets/commenter-sabine.jpg";
 import { useState, useEffect } from "react";
-
 const Article = () => {
   const [formData, setFormData] = useState({
     name: "",
     phone: ""
   });
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
   };
-
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Header />
       
       {/* Article Header */}
@@ -35,9 +31,7 @@ const Article = () => {
             </span>
           </div>
           
-          <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-6 leading-tight">
-            Gelenkschmerzen im Alter: Was wirklich hilft und was Sie wissen sollten
-          </h1>
+          <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-6 leading-tight">Ich war gelähmt vor Schmerz. Jetzt bewege ich mich wieder wie früher</h1>
           
           <div className="text-sm text-muted-foreground mb-4">
             Von <span className="text-primary font-medium">Dr. Maria Schmidt</span> (Rheumatolgin) • 
@@ -52,11 +46,7 @@ const Article = () => {
         <div className="max-w-4xl mx-auto">
           <div className="prose prose-lg max-w-none">
             <div className="mb-8">
-              <img 
-                src="/lovable-uploads/efeb78ca-317c-456d-b1f8-543002fb5fdb.png" 
-                alt="Gelenkschmerzen im Alter" 
-                className="w-full h-96 md:h-[500px] object-cover rounded-lg"
-              />
+              <img src="/lovable-uploads/efeb78ca-317c-456d-b1f8-543002fb5fdb.png" alt="Gelenkschmerzen im Alter" className="w-full h-96 md:h-[500px] object-cover rounded-lg" />
             </div>
             
             <p className="text-lg leading-relaxed mb-6">
@@ -174,30 +164,20 @@ const Article = () => {
                     <Label htmlFor="name" className="text-sm font-medium">
                       Ihr Name *
                     </Label>
-                    <Input
-                      id="name"
-                      type="text"
-                      required
-                      value={formData.name}
-                      onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
-                      className="mt-1"
-                      placeholder="Vorname Nachname"
-                    />
+                    <Input id="name" type="text" required value={formData.name} onChange={e => setFormData(prev => ({
+                    ...prev,
+                    name: e.target.value
+                  }))} className="mt-1" placeholder="Vorname Nachname" />
                   </div>
                   
                   <div>
                     <Label htmlFor="phone" className="text-sm font-medium">
                       Ihre Telefonnummer *
                     </Label>
-                    <Input
-                      id="phone"
-                      type="tel"
-                      required
-                      value={formData.phone}
-                      onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
-                      className="mt-1"
-                      placeholder="+49..."
-                    />
+                    <Input id="phone" type="tel" required value={formData.phone} onChange={e => setFormData(prev => ({
+                    ...prev,
+                    phone: e.target.value
+                  }))} className="mt-1" placeholder="+49..." />
                   </div>
 
                   <div className="text-center pt-4">
@@ -205,11 +185,7 @@ const Article = () => {
                       Flexosamin — bereits über 400.000 mal in Deutschland verkauft
                     </p>
                     
-                    <Button 
-                      type="submit" 
-                      size="lg" 
-                      className="w-full bg-red-600 hover:bg-red-700 text-white font-bold text-lg py-3 h-auto animate-pulse"
-                    >
+                    <Button type="submit" size="lg" className="w-full bg-red-600 hover:bg-red-700 text-white font-bold text-lg py-3 h-auto animate-pulse">
                       Jetzt bestellen
                     </Button>
                     
@@ -248,11 +224,7 @@ const Article = () => {
             <div className="space-y-6">
               <div className="border-b border-border pb-6">
                 <div className="flex items-start gap-3">
-                  <img 
-                    src={hansImage} 
-                    alt="Hans M." 
-                    className="w-10 h-10 rounded-full object-cover"
-                  />
+                  <img src={hansImage} alt="Hans M." className="w-10 h-10 rounded-full object-cover" />
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
                       <span className="font-semibold text-foreground">Hans M., 67</span>
@@ -268,11 +240,7 @@ const Article = () => {
 
               <div className="border-b border-border pb-6">
                 <div className="flex items-start gap-3">
-                  <img 
-                    src={monikaImage} 
-                    alt="Monika S." 
-                    className="w-10 h-10 rounded-full object-cover"
-                  />
+                  <img src={monikaImage} alt="Monika S." className="w-10 h-10 rounded-full object-cover" />
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
                       <span className="font-semibold text-foreground">Monika S., 54</span>
@@ -288,11 +256,7 @@ const Article = () => {
 
               <div className="border-b border-border pb-6">
                 <div className="flex items-start gap-3">
-                  <img 
-                    src={klausImage} 
-                    alt="Klaus W." 
-                    className="w-10 h-10 rounded-full object-cover"
-                  />
+                  <img src={klausImage} alt="Klaus W." className="w-10 h-10 rounded-full object-cover" />
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
                       <span className="font-semibold text-foreground">Klaus W., 72</span>
@@ -308,11 +272,7 @@ const Article = () => {
 
               <div className="border-b border-border pb-6">
                 <div className="flex items-start gap-3">
-                  <img 
-                    src={sabineImage} 
-                    alt="Sabine K." 
-                    className="w-10 h-10 rounded-full object-cover"
-                  />
+                  <img src={sabineImage} alt="Sabine K." className="w-10 h-10 rounded-full object-cover" />
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
                       <span className="font-semibold text-foreground">Sabine K., 49</span>
@@ -331,8 +291,6 @@ const Article = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Article;
