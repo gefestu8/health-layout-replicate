@@ -45,19 +45,22 @@ export const testimonials = [
     content: "Отличный ресурс для получения медицинской информации. Помог мне лучше понять свое состояние и подготовиться к визиту к врачу.",
     author: "Анна К.",
     role: "Пациент",
-    rating: 5
+    rating: 5,
+    avatar: "/src/assets/commenter-sabine.jpg"
   },
   {
     content: "Использую для консультаций с пациентами. Качественная база знаний и актуальная информация о лекарственных препаратах.",
     author: "Д-р Михаил П.",
     role: "Терапевт",
-    rating: 5
+    rating: 5,
+    avatar: "/src/assets/commenter-hans.jpg"
   },
   {
     content: "Удобный интерфейс и понятная подача медицинской информации. Рекомендую всем, кто следит за своим здоровьем.",
     author: "Елена В.",
-    role: "Медсестра",
-    rating: 5
+    role: "Медсестра", 
+    rating: 5,
+    avatar: "/src/assets/commenter-monika.jpg"
   }
 ];
 
