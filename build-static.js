@@ -8,12 +8,188 @@
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-const React = require('react');
-const ReactDOMServer = require('react-dom/server');
+
+// Функция для извлечения всех CSS переменных и стилей
+function extractFullCSS() {
+  const indexCssContent = fs.readFileSync(path.join(process.cwd(), 'src/index.css'), 'utf8');
+  
+  return `
+/* CSS Variables from index.css */
+${indexCssContent}
+
+/* Additional Tailwind Classes */
+.min-h-screen { min-height: 100vh; }
+.container { width: 100%; }
+@media (min-width: 640px) { .container { max-width: 640px; } }
+@media (min-width: 768px) { .container { max-width: 768px; } }
+@media (min-width: 1024px) { .container { max-width: 1024px; } }
+@media (min-width: 1280px) { .container { max-width: 1280px; } }
+@media (min-width: 1536px) { .container { max-width: 1536px; } }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.px-4 { padding-left: 1rem; padding-right: 1rem; }
+.py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+.py-8 { padding-top: 2rem; padding-bottom: 2rem; }
+.py-12 { padding-top: 3rem; padding-bottom: 3rem; }
+.p-8 { padding: 2rem; }
+.max-w-6xl { max-width: 72rem; }
+.max-w-4xl { max-width: 56rem; }
+.max-w-md { max-width: 28rem; }
+.max-w-none { max-width: none; }
+.flex { display: flex; }
+.justify-between { justify-content: space-between; }
+.justify-center { justify-content: center; }
+.items-center { align-items: center; }
+.items-start { align-items: flex-start; }
+.text-2xl { font-size: 1.5rem; line-height: 2rem; }
+.text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+.text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+.text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+.text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+.text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+.font-bold { font-weight: 700; }
+.font-semibold { font-weight: 600; }
+.font-medium { font-weight: 500; }
+.font-mono { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace; }
+.bg-background { background-color: hsl(var(--background)); }
+.bg-muted { background-color: hsl(var(--muted)); }
+.text-primary { color: hsl(var(--primary)); }
+.text-foreground { color: hsl(var(--foreground)); }
+.text-muted-foreground { color: hsl(var(--muted-foreground)); }
+.text-primary-foreground { color: hsl(var(--primary-foreground)); }
+.text-red-600 { color: rgb(220 38 38); }
+.text-red-700 { color: rgb(185 28 28); }
+.text-white { color: rgb(255 255 255); }
+.text-green-700 { color: rgb(21 128 61); }
+.bg-primary { background-color: hsl(var(--primary)); }
+.bg-red-600 { background-color: rgb(220 38 38); }
+.hover\\:bg-red-700:hover { background-color: rgb(185 28 28); }
+.hover\\:text-foreground:hover { color: hsl(var(--foreground)); }
+.border { border-width: 1px; }
+.border-b { border-bottom-width: 1px; }
+.border-t { border-top-width: 1px; }
+.border-t-4 { border-top-width: 4px; }
+.border-2 { border-width: 2px; }
+.border-border { border-color: hsl(var(--border)); }
+.border-red-200 { border-color: rgb(254 202 202); }
+.border-red-500 { border-color: rgb(239 68 68); }
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-3 { margin-bottom: 0.75rem; }
+.mb-4 { margin-bottom: 1rem; }
+.mb-6 { margin-bottom: 1.5rem; }
+.mb-8 { margin-bottom: 2rem; }
+.mt-4 { margin-top: 1rem; }
+.mt-8 { margin-top: 2rem; }
+.pt-4 { padding-top: 1rem; }
+.pb-6 { padding-bottom: 1.5rem; }
+.px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
+.py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+.py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+.py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+.rounded { border-radius: 0.25rem; }
+.rounded-lg { border-radius: 0.5rem; }
+.rounded-md { border-radius: 0.375rem; }
+.rounded-full { border-radius: 9999px; }
+.shadow-xl { box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1); }
+.space-x-6 > :not([hidden]) ~ :not([hidden]) { margin-left: 1.5rem; }
+.space-y-2 > :not([hidden]) ~ :not([hidden]) { margin-top: 0.5rem; }
+.space-y-4 > :not([hidden]) ~ :not([hidden]) { margin-top: 1rem; }
+.space-y-6 > :not([hidden]) ~ :not([hidden]) { margin-top: 1.5rem; }
+.gap-2 { gap: 0.5rem; }
+.gap-3 { gap: 0.75rem; }
+.leading-tight { line-height: 1.25; }
+.leading-relaxed { line-height: 1.625; }
+.prose { color: hsl(var(--foreground)); max-width: 65ch; }
+.prose-lg { font-size: 1.125rem; line-height: 1.7; }
+.w-full { width: 100%; }
+.w-10 { width: 2.5rem; }
+.h-auto { height: auto; }
+.h-10 { height: 2.5rem; }
+.flex-1 { flex: 1 1 0%; }
+.object-cover { object-fit: cover; }
+.list-disc { list-style-type: disc; }
+.list-none { list-style-type: none; }
+.list-inside { list-style-position: inside; }
+.hidden { display: none; }
+.block { display: block; }
+.text-center { text-align: center; }
+.animate-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+@keyframes pulse {
+  50% { opacity: .5; }
+}
+.bg-gradient-to-br { background-image: linear-gradient(to bottom right, var(--tw-gradient-stops)); }
+.from-red-50 { --tw-gradient-from: #fef2f2; --tw-gradient-to: rgb(254 242 242 / 0); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+.to-orange-50 { --tw-gradient-to: #fff7ed; }
+
+@media (min-width: 768px) {
+  .md\\:text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+  .md\\:block { display: block; }
+}
+
+/* Form styles */
+input[type="text"], input[type="tel"] {
+  display: flex;
+  height: 2.5rem;
+  width: 100%;
+  border-radius: 0.375rem;
+  border: 1px solid hsl(var(--border));
+  background-color: hsl(var(--background));
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  color: hsl(var(--foreground));
+}
+
+input[type="text"]:focus, input[type="tel"]:focus {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
+}
+
+input::placeholder {
+  color: hsl(var(--muted-foreground));
+}
+
+button {
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out;
+}
+
+/* Link hover effects */
+a:hover {
+  text-decoration: none;
+}
+  `;
+}
 
 // Простая функция для генерации статического HTML контента статьи
 function generateArticleHTML() {
-  return `
+  return `<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boris Becker über Flexosamine: "Jetzt bewege ich mich wieder wie früher" | Gelenk-Gel Erfahrung</title>
+  <meta name="description" content="Boris Becker spricht offen über seine Gelenkprobleme und wie Flexosamine ihm geholfen hat. Erfahrungsbericht über das revolutionäre Gelenk-Gel aus Deutschland." />
+  <meta name="author" content="Boris Becker, Gesundheitsmagazin" />
+  <meta name="keywords" content="Flexosamine, Boris Becker, Gelenkschmerzen, Gelenk-Gel, Arthrose, Knieschmerzen, Rückenschmerzen" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Boris Becker über Flexosamine: Jetzt bewege ich mich wieder wie früher" />
+  <meta property="og:description" content="Ex-Tennisstar Boris Becker berichtet über seine Erfahrungen mit Flexosamine Gelenk-Gel. Wie er seine Gelenkschmerzen überwunden hat." />
+  <meta property="og:url" content="https://flexosamine-becker.de/" />
+  <meta property="og:image" content="./lovable-uploads/efeb78ca-317c-456d-b1f8-543002fb5fdb.png" />
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://flexosamine-becker.de/" />
+  <meta property="twitter:title" content="Boris Becker über Flexosamine: Jetzt bewege ich mich wieder wie früher" />
+  <meta property="twitter:description" content="Ex-Tennisstar Boris Becker berichtet über seine Erfahrungen mit Flexosamine Gelenk-Gel." />
+  <meta property="twitter:image" content="./lovable-uploads/efeb78ca-317c-456d-b1f8-543002fb5fdb.png" />
+  
+  <style>
+    ${extractFullCSS()}
+  </style>
+</head>
+<body>
     <div class="min-h-screen bg-background">
       <header class="bg-background border-b border-border">
         <div class="container mx-auto px-4 py-4">
@@ -185,7 +361,9 @@ function generateArticleHTML() {
                   <p class="text-red-600 font-semibold mb-4">
                     Angebot läuft ab in:
                   </p>
-                  <div class="text-3xl font-mono font-bold text-red-600" id="timer">23:59:59</div>
+                  <div class="text-3xl font-mono font-bold text-red-600" id="timer">
+                    <span id="hours">01</span>:<span id="minutes">23</span>:<span id="seconds">45</span>
+                  </div>
                 </div>
                 
                 <div class="mb-8">
@@ -308,29 +486,49 @@ function generateArticleHTML() {
       </footer>
       
       <script>
-        // Timer countdown
+        // Timer countdown with proper logic matching React component
+        let timeLeft = {
+          hours: 1,
+          minutes: 23,
+          seconds: 45
+        };
+        
         function updateTimer() {
-          const timer = document.getElementById('timer');
-          const now = new Date().getTime();
-          const endTime = now + (24 * 60 * 60 * 1000); // 24 hours from now
+          const hoursEl = document.getElementById('hours');
+          const minutesEl = document.getElementById('minutes');
+          const secondsEl = document.getElementById('seconds');
           
-          setInterval(() => {
-            const currentTime = new Date().getTime();
-            const timeLeft = endTime - currentTime;
-            
-            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-            
-            timer.innerHTML = String(hours).padStart(2, '0') + ':' + 
-                             String(minutes).padStart(2, '0') + ':' + 
-                             String(seconds).padStart(2, '0');
-          }, 1000);
+          if (hoursEl && minutesEl && secondsEl) {
+            hoursEl.textContent = String(timeLeft.hours).padStart(2, '0');
+            minutesEl.textContent = String(timeLeft.minutes).padStart(2, '0');
+            secondsEl.textContent = String(timeLeft.seconds).padStart(2, '0');
+          }
         }
+        
+        function countdown() {
+          if (timeLeft.seconds > 0) {
+            timeLeft.seconds--;
+          } else if (timeLeft.minutes > 0) {
+            timeLeft.minutes--;
+            timeLeft.seconds = 59;
+          } else if (timeLeft.hours > 0) {
+            timeLeft.hours--;
+            timeLeft.minutes = 59;
+            timeLeft.seconds = 59;
+          } else {
+            // Reset timer when it reaches 0
+            timeLeft = { hours: 1, minutes: 23, seconds: 45 };
+          }
+          updateTimer();
+        }
+        
+        // Initialize and start timer
         updateTimer();
+        setInterval(countdown, 1000);
       </script>
     </div>
-  `;
+</body>
+</html>`;
 }
 
 console.log('🔥 Начинаем статическую сборку...');
@@ -413,17 +611,8 @@ indexContent = indexContent.replace(
   `<head>${articleMeta}</head>`
 );
 
-// Заменяем body секцию на статический HTML контент
-const staticBody = `
-  <body>
-    ${generateArticleHTML()}
-  </body>
-`;
-
-indexContent = indexContent.replace(
-  /<body>[\s\S]*?<\/body>/i,
-  staticBody
-);
+// Заменяем весь HTML-документ статическим содержимым
+indexContent = generateArticleHTML();
 
 // 4. Записываем обновленный index.html
 fs.writeFileSync(indexPath, indexContent);
