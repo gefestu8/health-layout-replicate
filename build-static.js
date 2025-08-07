@@ -34,7 +34,7 @@ function generateArticleHTML() {
           </header>
 
           <div class="prose max-w-none">
-            <img src="/lovable-uploads/efeb78ca-317c-456d-b1f8-543002fb5fdb.png" alt="Boris Becker über Flexosamine" class="w-full rounded-lg mb-8">
+            <img src="./lovable-uploads/efeb78ca-317c-456d-b1f8-543002fb5fdb.png" alt="Boris Becker über Flexosamine" class="w-full rounded-lg mb-8">
             
             <p class="lead text-lg mb-6">Nach jahrelangen Gelenkschmerzen hat Boris Becker endlich eine Lösung gefunden. In einem exklusiven Interview spricht der ehemalige Tennisstar über seine Erfahrungen mit Flexosamine - einem revolutionären Gelenk-Gel, das in Deutschland entwickelt wurde.</p>
 
@@ -60,7 +60,7 @@ function generateArticleHTML() {
             <h2 class="text-2xl font-bold mt-8 mb-4">Die Transformation</h2>
             <p class="mb-4">"Nach nur wenigen Wochen konnte ich wieder ohne Schmerzen gehen", erzählt Becker begeistert. "Heute fühle ich mich wie früher - beweglich und schmerzfrei. Flexosamine hat mein Leben verändert."</p>
 
-            <img src="/lovable-uploads/DeWatermark.ai_1754506600916.jpeg" alt="Flexosamine Gel" class="w-full max-w-md mx-auto rounded-lg my-8">
+            <img src="./lovable-uploads/DeWatermark.ai_1754506600916.jpeg" alt="Flexosamine Gel" class="w-full max-w-md mx-auto rounded-lg my-8">
 
             <div class="bg-green-50 p-8 rounded-lg text-center my-12">
               <h2 class="text-3xl font-bold mb-4 text-green-800">🔥 Limitiertes Angebot 🔥</h2>
@@ -82,7 +82,7 @@ function generateArticleHTML() {
             <div class="grid gap-6 md:grid-cols-2 my-8">
               <div class="bg-gray-50 p-6 rounded-lg">
                 <div class="flex items-center mb-4">
-                  <img src="/img/commenter-hans.jpg" alt="Hans" class="w-12 h-12 rounded-full mr-4">
+                  <img src="./img/commenter-hans.jpg" alt="Hans" class="w-12 h-12 rounded-full mr-4">
                   <div>
                     <h4 class="font-bold">Hans M., 58</h4>
                     <div class="text-yellow-500">★★★★★</div>
@@ -93,7 +93,7 @@ function generateArticleHTML() {
               
               <div class="bg-gray-50 p-6 rounded-lg">
                 <div class="flex items-center mb-4">
-                  <img src="/img/commenter-monika.jpg" alt="Monika" class="w-12 h-12 rounded-full mr-4">
+                  <img src="./img/commenter-monika.jpg" alt="Monika" class="w-12 h-12 rounded-full mr-4">
                   <div>
                     <h4 class="font-bold">Monika S., 62</h4>
                     <div class="text-yellow-500">★★★★★</div>
@@ -138,6 +138,12 @@ const distPath = path.join(process.cwd(), 'dist');
 const indexPath = path.join(distPath, 'index.html');
 let indexContent = fs.readFileSync(indexPath, 'utf8');
 
+// Извлекаем CSS ссылки из собранного HTML
+const cssMatches = indexContent.match(/<link[^>]*href="[^"]*\.css"[^>]*>/g) || [];
+const jsMatches = indexContent.match(/<script[^>]*src="[^"]*\.js"[^>]*>/g) || [];
+const cssLinks = cssMatches.join('\n  ');
+const jsScripts = jsMatches.join('\n  ');
+
 // 3. Заменяем title и мета-теги на статью о Flexosamine
 const articleMeta = `
   <meta charset="UTF-8" />
@@ -146,6 +152,8 @@ const articleMeta = `
   <meta name="description" content="Boris Becker spricht offen über seine Gelenkprobleme und wie Flexosamine ihm geholfen hat. Erfahrungsbericht über das revolutionäre Gelenk-Gel aus Deutschland." />
   <meta name="author" content="Boris Becker, Gesundheitsmagazin" />
   <meta name="keywords" content="Flexosamine, Boris Becker, Gelenkschmerzen, Gelenk-Gel, Arthrose, Knieschmerzen, Rückenschmerzen" />
+  
+  ${cssLinks}
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article" />
@@ -220,14 +228,22 @@ if (!fs.existsSync(imgDir)) {
   fs.mkdirSync(imgDir);
 }
 
-// Копируем изображения из public/lovable-uploads в img/
+// Копируем изображения из public/lovable-uploads 
 const uploadsDir = path.join(process.cwd(), 'public', 'lovable-uploads');
+const uploadsDestDir = path.join(distPath, 'lovable-uploads');
+if (!fs.existsSync(uploadsDestDir)) {
+  fs.mkdirSync(uploadsDestDir);
+}
+
 if (fs.existsSync(uploadsDir)) {
   const files = fs.readdirSync(uploadsDir);
   files.forEach(file => {
     const srcPath = path.join(uploadsDir, file);
-    const destPath = path.join(imgDir, file);
+    const destPath = path.join(uploadsDestDir, file);
     fs.copyFileSync(srcPath, destPath);
+    // Также копируем в img/ для совместимости
+    const imgDestPath = path.join(imgDir, file);
+    fs.copyFileSync(srcPath, imgDestPath);
   });
 }
 
